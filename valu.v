@@ -1,3 +1,6 @@
+//mayhaps need to change here how SEW is used
+//either that or there will be a translator outside
+
 module vALU (
         reg_in1,
         reg_in2,
