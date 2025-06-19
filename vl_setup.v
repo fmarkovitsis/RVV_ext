@@ -2,7 +2,9 @@ module vl_setup (
         SEW,
         lmul,
         AVL,
-        valid,
+        valid_lmul,
+        valid_sew,
+        vsetup_en,
         vl,
         new_AVL
     );
@@ -10,8 +12,10 @@ module vl_setup (
     input[7:0] SEW;
     input[4:0] lmul;
     input[8:0] AVL;
+    input valid_lmul;
+    input valid_sew;
 
-    output reg valid;
+    output reg vsetup_en;
     output reg [8:0] vl;
     output reg [8:0]  new_AVL;
 
@@ -21,9 +25,10 @@ module vl_setup (
     parameter [7:0] VLEN = 8'd128; 
     integer i;
 
-    always @(*) begin
-        valid = 1'b1;
 
+    assign vsetup_en = valid_sew && valid_lmul;
+
+    always @(*) begin
         case (SEW)
             8'd8: begin
                 temp = 3'd3;
@@ -45,11 +50,6 @@ module vl_setup (
                 temp = 0;
             end
         endcase
-
-        if ((lmul != 5'd1) && (lmul != 5'd2) && (lmul != 5'd4) && (lmul != 5'd8) && (lmul != 5'd16)) begin
-            valid = 0;
-            temp = 0;
-        end
         
         curr_vlmax = (VLEN >> temp) * lmul;
 
@@ -58,10 +58,11 @@ module vl_setup (
             new_AVL = AVL - curr_vlmax;
         end
         else begin
+            if (valid_lmul && valid_sew) begin
             vl = AVL;
             new_AVL = 0;
+            end
         end
-
     end
 
 endmodule

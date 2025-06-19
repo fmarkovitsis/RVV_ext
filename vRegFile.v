@@ -6,44 +6,41 @@ module vRegFile (
     input [127:0] wd,              // Write data
     input wen,                     // Write enable for vector registers
 
-    input [8:0] vl_in,             // New value for vl
-    input vl_wen,                  // Write-enable for vl
-
+    input [8:0] vl_in,             // New value for vl                  // Write-enable for vl
+    input [8:0] AVL_in,            // New value for AVL
     input [6:0] vtype_in,          // New value for vtype
-    input vtype_wen,               // Write-enable for vtype
 
     output [127:0] rdA, rdB,       // Read data outputs
     output reg [8:0] vl,           // Current vl
-    output reg [6:0] vtype         // Current vtype
+    output reg [6:0] vtype,        // Current vtype
+    output reg [8:0] AVL_reg
 );
 
     reg [127:0] data[31:0]; // 32 general-purpose vector registers
     integer i;
 
     // Write and reset logic
-    always @(posedge clk or negedge rst) begin
+    always @(posedge clk) begin
         if (!rst) begin
             for (i = 0; i < 32; i = i + 1)
                 data[i] <= 128'd0;
             vl <= 9'd0;
             vtype <= 7'd0;
         end else begin
-            
+
             if (wen)
                 data[wa] <= wd;
             else 
                 data[wa] <= data[wa]; // Maintain current value if not writing
 
-            if (vl_wen)
+            if (vtype_in[6]) // valid vtype bit 
                 vl <= vl_in;
+                vtype <= vtype_in;
+                AVL_reg <= AVL_in;
             else
                 vl <= vl; // Maintain current value if not writing
-
-            if (vtype_wen)
-                vtype <= vtype_in;
-            else
                 vtype <= vtype; // Maintain current value if not writing
-
+                AVL_reg <= AVL_reg;
         end
     end
 
