@@ -245,7 +245,46 @@ module vALU (
                     end
                 endcase
             end
-                        
+
+            3'b111: begin   //find min
+                case (SEW)
+                    8'd8: begin
+                        for (i=0; i < (VLEN>>3); i=i+1) begin
+                            if (temp < $signed(reg_in1)) begin
+                                temp = reg_in1;
+                            end
+                        end
+                        reg_dest = temp;
+                    end
+                    8'd16: begin
+                        for (i=0; i < (VLEN>>4); i=i+1) begin
+                            if (temp < $signed(reg_in1)) begin
+                                temp = reg_in1;
+                            end
+                        end
+                        reg_dest = temp;
+                    end
+                    8'd32: begin
+                        for (i=0; i < (VLEN>>5); i=i+1) begin
+                            if (temp < $signed(reg_in1)) begin
+                                temp = reg_in1;
+                            end
+                        end
+                        reg_dest = temp;
+                    end
+                    8'd64: begin
+                        for (i=0; i < (VLEN>>6); i=i+1) begin
+                            if (temp < $signed(reg_in1)) begin
+                                temp = reg_in1;
+                            end
+                        end
+                        reg_dest = temp;
+                    end
+                    8'd128: begin
+                        reg_dest = reg_in1;
+                    end
+                endcase
+            end         
             default:    begin
                             reg_dest = 32'b0;
                         end

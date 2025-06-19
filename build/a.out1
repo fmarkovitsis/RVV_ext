@@ -1,0 +1,34 @@
+**** module/scope: vALU
+     Flip-Flops   : 0
+     Logic Gates  : 31304
+     ADDER[8]: 32 units
+     ADDER[16]: 16 units
+     ADDER[32]: 8 units
+     ADDER[64]: 4 units
+     ADDER[128]: 2 units
+     MAGNITUDE[128]: 60 units
+     MUX[2]: 6656 slices
+     LPM[4]: 332 unaccounted
+     LPM[5]: 30 unaccounted
+     LPM[8]: 62 unaccounted
+     LPM[27]: 124 unaccounted
+     LPM[40]: 2 unaccounted
+     LOG[13]: 3 unaccounted
+     LOG[14]: 1 unaccounted
+**** TOTALS
+     Flip-Flops   : 0
+     Logic Gates  : 31304
+     ADDER[8]: 32 units
+     ADDER[16]: 16 units
+     ADDER[32]: 8 units
+     ADDER[64]: 4 units
+     ADDER[128]: 2 units
+     MAGNITUDE[128]: 60 units
+     MUX[2]: 6656 slices
+     LPM[4]: 332 unaccounted
+     LPM[5]: 30 unaccounted
+     LPM[8]: 62 unaccounted
+     LPM[27]: 124 unaccounted
+     LPM[40]: 2 unaccounted
+     LOG[13]: 3 unaccounted
+     LOG[14]: 1 unaccounted
