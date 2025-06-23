@@ -32,7 +32,7 @@ button_synchronizer button_sync (
 
 vtype_decoder vtype_decoder_unit (
     .SEW_encoded(sew_encoded_id),
-    .lmul_encoded(lmul_encoded_id),
+    .LMUL_encoded(lmul_encoded_id),
     .SEW(SEW_decoded),
     .lmul(LMUL_decoded),
     .valid_lmul(valid_lmul),
@@ -50,24 +50,6 @@ vl_setup vl_setup_unit (            //will problably change with the
     .new_AVL(avl_in_id)
 );
 
-vRegFile vRegFile_unit (
-    .clk(clk),
-    .rst(reset_debounced),
-    .raA(raA),
-    .raB(raB),
-    .wa(wa),
-    .wd(wd),    
-    .wen(wen),
-    .vl_in(vl_in_ex),
-    .avl_in(avl_in_ex),
-    .vtype_in({vsetup_en_ex, sew_encoded_ex, lmul_encoded_ex}),
-    .rdA(rdA_id),
-    .rdB(rdB_id),
-    .vl(vl_id),
-    .vtype(vtype_id),
-    .AVL_reg(avl_id)
-);
-
 ////////////////////////////////////////////////////////////
 reg vsetup_en_ex;
 reg [2:0] sew_encoded_ex, lmul_encoded_ex;
@@ -77,8 +59,27 @@ reg [8:0] vl_in_ex;
 reg [8:0] vl_ex;
 reg [31:0] alu_scalal_in_ex;
 reg [127:0] rdA_ex, rdB_ex;
-reg [8:0] vl_ex;
 reg [8:0] avl_ex;
+
+////////////////////////////////////////////////////////////
+
+vRegFile vRegFile_unit (
+    .clk(clk),
+    .rst(reset_debounced),
+    .raA(raA),
+    .raB(raB),
+    .wa(wa),
+    .wd(wd),    
+    .wen(wen),
+    .vl_in(vl_in_ex),
+    .AVL_in(avl_in_ex),
+    .vtype_in({vsetup_en_ex, sew_encoded_ex, lmul_encoded_ex}),
+    .rdA(rdA_id),
+    .rdB(rdB_id),
+    .vl(vl_id),
+    .vtype(vtype_id),
+    .AVL_reg(avl_id)
+);
 
 always@(posedge clk) begin
     if (!rst) begin
@@ -111,8 +112,8 @@ end
 ////////////////////////////////////////////////////////////
 
 vALU alu_unit (
-    .reg_inA(rdA_ex),
-    .reg_inB(rdB_ex),
+    .reg_in1(rdA_ex),
+    .reg_in2(rdB_ex),
     .reg_scalar_in(alu_scalal_in_ex),
     .valu_op(valu_op),
     .SEW(vtype_ex[5:3]),

@@ -33,14 +33,15 @@ module vRegFile (
             else 
                 data[wa] <= data[wa]; // Maintain current value if not writing
 
-            if (vtype_in[6]) // valid vtype bit 
+            if (vtype_in[6]) begin // valid vtype bit 
                 vl <= vl_in;
                 vtype <= vtype_in;
                 AVL_reg <= AVL_in;
-            else
+            end else begin
                 vl <= vl; // Maintain current value if not writing
                 vtype <= vtype; // Maintain current value if not writing
                 AVL_reg <= AVL_reg;
+            end
         end
     end
 

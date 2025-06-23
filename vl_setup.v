@@ -15,7 +15,7 @@ module vl_setup (
     input valid_lmul;
     input valid_sew;
 
-    output reg vsetup_en;
+    output vsetup_en;
     output reg [8:0] vl;
     output reg [8:0]  new_AVL;
 
@@ -46,7 +46,6 @@ module vl_setup (
                 temp = 3'd7;
             end
             default: begin
-                valid = 1'b0;
                 temp = 0;
             end
         endcase
