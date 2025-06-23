@@ -1,8 +1,8 @@
 module RVV(
     input clk,
     input rst,
-    input [2:0] sew_encoded,
-    input [2:0] lmul_encoded,
+    input [2:0] sew_encoded_id,
+    input [2:0] lmul_encoded_id,
     input [8:0] AVL,                // Current available vector length
     input [4:0] raA, raB, wa,      // Read addresses A/B, write address
     input [127:0] wd,              // Write data
@@ -14,12 +14,15 @@ wire [7:0] SEW_decoded;
 wire [4:0] LMUL_decoded; 
 wire reset_debounced;
 wire valid_lmul, valid_sew;
-wire vsetup_en;
-wire [8:0] vl_in;
+wire vsetup_en_id;
+wire [8:0] vl_in_id;
 wire [2:0] valu_op;
-wire [127:0] alu_scalar_in;
-wire [8:0] new_AVL;
-wire [8:0] vl;
+wire [127:0] alu_scalal_in_id;
+wire [8:0] avl_in_id;
+wire [8:0] vl_id;
+wire [6:0] vtype_id;
+wire [8:0] avl_id;
+wire [127:0] rdA_id, rdB_id;          // Read data A/B
 
 button_synchronizer button_sync (
     .clk(clk),
@@ -28,8 +31,8 @@ button_synchronizer button_sync (
 );
 
 vtype_decoder vtype_decoder_unit (
-    .SEW_encoded(sew_encoded),
-    .lmul_encoded(lmul_encoded),
+    .SEW_encoded(sew_encoded_id),
+    .lmul_encoded(lmul_encoded_id),
     .SEW(SEW_decoded),
     .lmul(LMUL_decoded),
     .valid_lmul(valid_lmul),
@@ -42,9 +45,9 @@ vl_setup vl_setup_unit (            //will problably change with the
     .AVL(AVL),
     .valid_lmul(valid_lmul),
     .valid_sew(valid_sew),
-    .vsetup_en(vsetup_en),
-    .vl(vl_in),
-    .new_AVL(new_AVL)
+    .vsetup_en(vsetup_en_id),
+    .vl(vl_in_id),
+    .new_AVL(avl_in_id)
 );
 
 vRegFile vRegFile_unit (
@@ -55,60 +58,64 @@ vRegFile vRegFile_unit (
     .wa(wa),
     .wd(wd),    
     .wen(wen),
-    .vl_in(idex_vl_in),
-    .AVL_in(idex_new_AVL),
-    .vtype_in({idex_vsetup_en, idex_sew_encoded, idex_lmul_encoded}),
-    .rdA(rdA),
-    .rdB(rdB),
-    .vl(vl),
-    .vtype(vtype),
-    .AVL_reg(AVL_reg)
+    .vl_in(vl_in_ex),
+    .avl_in(avl_in_ex),
+    .vtype_in({vsetup_en_ex, sew_encoded_ex, lmul_encoded_ex}),
+    .rdA(rdA_id),
+    .rdB(rdB_id),
+    .vl(vl_id),
+    .vtype(vtype_id),
+    .AVL_reg(avl_id)
 );
 
 ////////////////////////////////////////////////////////////
-reg idex_vsetup_en;
-reg [2:0] idex_sew_encoded, idex_lmul_encoded;
-reg [6:0] idex_vtype;
-reg [8:0] idex_new_AVL;
-reg [8:0] idex_vl_in;
-reg [8:0] idex_vl;
-reg [31:0] idex_alu_scalar_in;
-reg [127:0] idex_rdA, idex_rdB;
+reg vsetup_en_ex;
+reg [2:0] sew_encoded_ex, lmul_encoded_ex;
+reg [6:0] vtype_ex;
+reg [8:0] avl_in_ex;
+reg [8:0] vl_in_ex;
+reg [8:0] vl_ex;
+reg [31:0] alu_scalal_in_ex;
+reg [127:0] rdA_ex, rdB_ex;
+reg [8:0] vl_ex;
+reg [8:0] avl_ex;
 
 always@(posedge clk) begin
     if (!rst) begin
-        idex_lmul_encoded <= 0;
-        idex_sew_encoded <= 0;
-        idex_vsetup_en <= 0;
-        idex_vtype <= 0;
-        idex_vl_in <= 0;
-        idex_alu_scalar_in <= 0;
-        idex_rdA <= 0;
-        idex_rdB <= 0;
-        idex_new_AVL <= 0;
-        idex_vl <= 0;
+        lmul_encoded_ex <= 0;
+        sew_encoded_ex <= 0;
+        vsetup_en_ex <= 0;
+        vtype_ex <= 0;
+        vl_in_ex <= 0;
+        alu_scalal_in_ex <= 0;
+        rdA_ex <= 0;
+        rdB_ex <= 0;
+        avl_in_ex <= 0;
+        vl_ex <= 0;
+        avl_ex <= 0;
     end
     else begin
-        idex_lmul_encoded <= lmul_encoded;
-        idex_sew_encoded <= sew_encoded;
-        idex_vsetup_en <= vsetup_en;
-        idex_vtype <= vtype;
-        idex_vl_in <= vl_in;
-        idex_alu_scalar_in <= alu_scalar_in;
-        idex_rdA <= rdA;
-        idex_rdB <= rdB;
-        idex_new_AVL <= new_AVL;
-        idex_vl <= vl;
+        lmul_encoded_ex <= lmul_encoded_id;
+        sew_encoded_ex <= sew_encoded_id;
+        vsetup_en_ex <= vsetup_en_id;
+        vtype_ex <= vtype_id;
+        vl_in_ex <= vl_in_id;
+        alu_scalal_in_ex <= alu_scalal_in_id;
+        rdA_ex <= rdA_id;
+        rdB_ex <= rdB_id;
+        avl_in_ex <= avl_in_id;
+        vl_ex <= vl_id;
+        avl_ex <= avl_id;
     end
 end
 ////////////////////////////////////////////////////////////
 
 vALU alu_unit (
-    .reg_inA(idex_rdA),
-    .reg_inB(idex_rdB),
-    .reg_scalar_in(idex_alu_scalar_in),
+    .reg_inA(rdA_ex),
+    .reg_inB(rdB_ex),
+    .reg_scalar_in(alu_scalal_in_ex),
     .valu_op(valu_op),
-    .SEW(idex_vtype[5:3]),
+    .SEW(vtype_ex[5:3]),
     .reg_dest(alu_res)
 );
 
