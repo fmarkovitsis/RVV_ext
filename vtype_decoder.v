@@ -4,7 +4,7 @@ module vtype_decoder (
         SEW,
         lmul,
         valid_lmul,
-        valid_sew,
+        valid_sew
     );
 
     input [2:0] SEW_encoded, LMUL_encoded;
@@ -15,6 +15,7 @@ module vtype_decoder (
 
     always @(*) begin 
         valid_sew = 1;
+        SEW = 8'b0;
         
         case (SEW_encoded)
 
@@ -24,6 +25,7 @@ module vtype_decoder (
             3'b011: SEW = 8'd64;
             3'b100: SEW = 8'd128;
             default: begin
+                
                 valid_sew = 0;
             end
         endcase
@@ -31,6 +33,7 @@ module vtype_decoder (
 
     always @(*) begin 
         valid_lmul = 1;
+        lmul = 3'b0;
         
         case (LMUL_encoded)
             3'b000: lmul = 5'd1;
@@ -39,6 +42,7 @@ module vtype_decoder (
             3'b011: lmul = 5'd8;
             3'b100: lmul = 5'd16;
             default: begin
+                lmul = lmul;
                 valid_lmul = 0;
             end
         endcase

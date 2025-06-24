@@ -52,15 +52,20 @@ module vl_setup (
         
         curr_vlmax = (VLEN >> temp) * lmul;
 
-        if (curr_vlmax <= AVL) begin
-            vl = curr_vlmax;
-            new_AVL = AVL - curr_vlmax;
+
+        if (valid_lmul && valid_sew) begin
+            if (curr_vlmax <= AVL) begin
+                    vl = curr_vlmax;
+                    new_AVL = AVL - curr_vlmax;
+            end
+            else begin
+                vl = AVL;
+                new_AVL = 0;
+            end
         end
         else begin
-            if (valid_lmul && valid_sew) begin
-            vl = AVL;
+            vl = 0;
             new_AVL = 0;
-            end
         end
     end
 

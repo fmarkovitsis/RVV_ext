@@ -207,6 +207,7 @@ module vALU (
             end
 
             3'b110: begin   //find min
+                temp = 128'b0;
                 case (SEW)
                     8'd8: begin
                         for (i=0; i < (VLEN>>3); i=i+1) begin
@@ -247,6 +248,7 @@ module vALU (
             end
 
             3'b111: begin   //find max
+                temp = 128'b0;
                 case (SEW)
                     8'd8: begin
                         for (i=0; i < (VLEN>>3); i=i+1) begin

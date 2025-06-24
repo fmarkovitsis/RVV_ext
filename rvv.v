@@ -1,11 +1,13 @@
 module RVV(
     input clk,
     input rst,
+    input [2:0] valu_op,
     input [2:0] sew_encoded_id,
     input [2:0] lmul_encoded_id,
     input [8:0] AVL,                // Current available vector length
     input [4:0] raA, raB, wa,      // Read addresses A/B, write address
     input [127:0] wd,              // Write data
+    input [31:0] alu_scalar_in_id,
     input wen,                     // Write enable for vector registers
     output [127:0] alu_res
 );
@@ -16,8 +18,6 @@ wire reset_debounced;
 wire valid_lmul, valid_sew;
 wire vsetup_en_id;
 wire [8:0] vl_in_id;
-wire [2:0] valu_op;
-wire [127:0] alu_scalal_in_id;
 wire [8:0] avl_in_id;
 wire [8:0] vl_id;
 wire [6:0] vtype_id;
@@ -57,7 +57,7 @@ reg [6:0] vtype_ex;
 reg [8:0] avl_in_ex;
 reg [8:0] vl_in_ex;
 reg [8:0] vl_ex;
-reg [31:0] alu_scalal_in_ex;
+reg [31:0] alu_scalar_in_ex;
 reg [127:0] rdA_ex, rdB_ex;
 reg [8:0] avl_ex;
 
@@ -88,7 +88,7 @@ always@(posedge clk) begin
         vsetup_en_ex <= 0;
         vtype_ex <= 0;
         vl_in_ex <= 0;
-        alu_scalal_in_ex <= 0;
+        alu_scalar_in_ex <= 0;
         rdA_ex <= 0;
         rdB_ex <= 0;
         avl_in_ex <= 0;
@@ -101,7 +101,7 @@ always@(posedge clk) begin
         vsetup_en_ex <= vsetup_en_id;
         vtype_ex <= vtype_id;
         vl_in_ex <= vl_in_id;
-        alu_scalal_in_ex <= alu_scalal_in_id;
+        alu_scalar_in_ex <= alu_scalar_in_id;
         rdA_ex <= rdA_id;
         rdB_ex <= rdB_id;
         avl_in_ex <= avl_in_id;
@@ -114,7 +114,7 @@ end
 vALU alu_unit (
     .reg_in1(rdA_ex),
     .reg_in2(rdB_ex),
-    .reg_scalar_in(alu_scalal_in_ex),
+    .reg_scalar_in(alu_scalar_in_ex),
     .valu_op(valu_op),
     .SEW(vtype_ex[5:3]),
     .reg_dest(alu_res)
