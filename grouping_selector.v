@@ -1,6 +1,7 @@
 // TODO:
 // σημα για LMUL>1 να κανει stall τα σταδιο IF1/IF2
 // VL for min/max ops
+// LMUL < 1 
 
 
 module grouping_selector (
