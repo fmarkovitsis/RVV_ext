@@ -9,7 +9,7 @@ module vl_setup (
         new_AVL
     );
 
-    input[7:0] SEW;
+    input[6:0] SEW;
     input[4:0] lmul;
     input[8:0] AVL;
     input valid_lmul;
@@ -22,7 +22,7 @@ module vl_setup (
     reg [8:0] curr_vlmax;
     reg [2:0] temp;
 
-    parameter [7:0] VLEN = 8'd128; 
+    parameter [6:0] VLEN = 8'd64; 
     integer i;
 
 
@@ -30,19 +30,19 @@ module vl_setup (
 
     always @(*) begin
         case (SEW)
-            8'd8: begin
+            8'd4: begin
                 temp = 3'd3;
             end
-            8'd16: begin
+            8'd8: begin
                 temp = 3'd4;
             end
-            8'd32: begin
+            8'd16: begin
                 temp = 3'd5;
             end
-            8'd64: begin
+            8'd32: begin
                 temp = 3'd6;
             end
-            8'd128: begin
+            8'd64: begin
                 temp = 3'd7;
             end
             default: begin
@@ -60,12 +60,12 @@ module vl_setup (
             end
             else begin
                 vl = AVL;
-                new_AVL = 0;
+                new_AVL = 9'd0;
             end
         end
         else begin
-            vl = 0;
-            new_AVL = 0;
+            vl = 9'd0;
+            new_AVL = 9'd0;
         end
     end
 
@@ -76,11 +76,11 @@ endmodule
 
 ///////////////////////////////////////////////////////////////////////////
 // sew:
-// 000 -> 8
-// 001 -> 16
-// 010 -> 32
-// 011 -> 64
-// 100 -> 128
+// 000 -> 4
+// 001 -> 8
+// 010 -> 16
+// 011 -> 32
+// 100 -> 64
 
 // lmul:
 // 000 -> 1

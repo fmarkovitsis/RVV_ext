@@ -6,13 +6,13 @@ module RVV(
     input [2:0] lmul_encoded_id,
     input [8:0] AVL,                // Current available vector length
     input [4:0] raA, raB, wa,      // Read addresses A/B, write address
-    input [127:0] wd,              // Write data
+    input [63:0] wd,              // Write data
     input [31:0] alu_scalar_in_id,
     input wen,                     // Write enable for vector registers
-    output [127:0] alu_res
+    output [63:0] alu_res
 );
 
-wire [7:0] SEW_decoded;
+wire [6:0] SEW_decoded;
 wire [4:0] LMUL_decoded; 
 wire reset_debounced;
 wire valid_lmul, valid_sew;
@@ -22,7 +22,7 @@ wire [8:0] avl_in_id;
 wire [8:0] vl_id;
 wire [6:0] vtype_id;
 wire [8:0] avl_id;
-wire [127:0] rdA_id, rdB_id;          // Read data A/B
+wire [63:0] rdA_id, rdB_id;          // Read data A/B
 
 button_synchronizer button_sync (
     .clk(clk),
@@ -58,7 +58,7 @@ reg [8:0] avl_in_ex;
 reg [8:0] vl_in_ex;
 reg [8:0] vl_ex;
 reg [31:0] alu_scalar_in_ex;
-reg [127:0] rdA_ex, rdB_ex;
+reg [63:0] rdA_ex, rdB_ex;
 reg [8:0] avl_ex;
 
 ////////////////////////////////////////////////////////////
@@ -83,17 +83,17 @@ vRegFile vRegFile_unit (
 
 always@(posedge clk) begin
     if (!rst) begin
-        lmul_encoded_ex <= 0;
-        sew_encoded_ex <= 0;
-        vsetup_en_ex <= 0;
-        vtype_ex <= 0;
-        vl_in_ex <= 0;
-        alu_scalar_in_ex <= 0;
-        rdA_ex <= 0;
-        rdB_ex <= 0;
-        avl_in_ex <= 0;
-        vl_ex <= 0;
-        avl_ex <= 0;
+        lmul_encoded_ex <= 3'd0;
+        sew_encoded_ex <= 3'd0;
+        vsetup_en_ex <= 1'd0;
+        vtype_ex <= 7'd0;
+        vl_in_ex <= 9'd0;
+        alu_scalar_in_ex <= 32'd0;
+        rdA_ex <= 64'd0;
+        rdB_ex <= 64'd0;
+        avl_in_ex <= 9'd0;
+        vl_ex <= 9'd0;
+        avl_ex <= 9'd0;
     end
     else begin
         lmul_encoded_ex <= lmul_encoded_id;
