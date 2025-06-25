@@ -61,14 +61,19 @@ reg [31:0] alu_scalar_in_ex;
 reg [63:0] rdA_ex, rdB_ex;
 reg [8:0] avl_ex;
 
+reg [3:0] lmul_ex;
+wire [3:0] lmul_id;
+reg lmul_stall_ex;
+wire lmul_stall_id;
+wire [4:0] raA_group, raB_group, rdest_group;
 ////////////////////////////////////////////////////////////
 
 vRegFile vRegFile_unit (
     .clk(clk),
     .rst(reset_debounced),
-    .raA(raA),
-    .raB(raB),
-    .wa(wa),
+    .raA(raA_group),
+    .raB(raB_group),
+    .wa(rdest_group),
     .wd(wd),    
     .wen(wen),
     .vl_in(vl_in_ex),
@@ -79,6 +84,22 @@ vRegFile vRegFile_unit (
     .vl(vl_id),
     .vtype(vtype_id),
     .AVL_reg(avl_id)
+);
+
+
+
+grouping_selector grouping_selector_unit (
+    .raA(raA),
+    .raB(raB),
+    .rdest(wa),
+    .lmul_reg(vtype_id[2:0]), // encoded LMUL from vregfile 
+    .lmul_group(lmul_ex), // decoded LMUL from the previous grouping_selector operation output
+    .lmul_stall_in(lmul_stall_ex), // stall signal for the grouping selector
+    .lmul_out(lmul_id), // decoded lmul output
+    .lmul_stall_out(lmul_stall_id), // stall signal for the grouping selector
+    .raA_out(raA_group),
+    .raB_out(raB_group),
+    .rdest_out(rdest_group)
 );
 
 always@(posedge clk) begin
@@ -94,6 +115,8 @@ always@(posedge clk) begin
         avl_in_ex <= 9'd0;
         vl_ex <= 9'd0;
         avl_ex <= 9'd0;
+        lmul_ex <= 4'd0;
+        lmul_stall_ex <= 1'b0;
     end
     else begin
         lmul_encoded_ex <= lmul_encoded_id;
@@ -107,6 +130,8 @@ always@(posedge clk) begin
         avl_in_ex <= avl_in_id;
         vl_ex <= vl_id;
         avl_ex <= avl_id;
+        lmul_ex <= lmul_id;
+        lmul_stall_ex <= lmul_stall_id;
     end
 end
 ////////////////////////////////////////////////////////////
