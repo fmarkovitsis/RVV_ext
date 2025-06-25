@@ -31,19 +31,19 @@ module vl_setup (
     always @(*) begin
         case (SEW)
             8'd4: begin
-                temp = 3'd3;
+                temp = 3'd2;
             end
             8'd8: begin
-                temp = 3'd4;
+                temp = 3'd3;
             end
             8'd16: begin
-                temp = 3'd5;
+                temp = 3'd4;
             end
             8'd32: begin
-                temp = 3'd6;
+                temp = 3'd5;
             end
             8'd64: begin
-                temp = 3'd7;
+                temp = 3'd6;
             end
             default: begin
                 temp = 3'd0;
