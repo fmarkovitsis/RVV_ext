@@ -46,7 +46,7 @@ module vl_setup (
                 temp = 3'd7;
             end
             default: begin
-                temp = 0;
+                temp = 3'd0;
             end
         endcase
         
