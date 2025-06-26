@@ -10,7 +10,7 @@ module vtype_decoder (
     input [2:0] SEW_encoded, LMUL_encoded;
 
     output reg [6:0] SEW;
-    output reg [4:0] lmul;
+    output reg [3:0] lmul;
     output reg valid_lmul, valid_sew;
 
     always @(*) begin 
@@ -40,7 +40,6 @@ module vtype_decoder (
             3'b001: lmul = 5'd2; 
             3'b010: lmul = 5'd4; 
             3'b011: lmul = 5'd8;
-            3'b100: lmul = 5'd16;
             default: begin
                 lmul = lmul;
                 valid_lmul = 1'd0;

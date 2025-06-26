@@ -4,7 +4,7 @@ module RVV(
     input [2:0] valu_op,
     input [2:0] sew_encoded_id,
     input [2:0] lmul_encoded_id,
-    input [8:0] AVL,                // Current available vector length
+    input [7:0] AVL,                // Current available vector length
     input [4:0] raA, raB, wa,      // Read addresses A/B, write address
     input [63:0] wd,              // Write data
     input [31:0] alu_scalar_in_id,
@@ -13,15 +13,15 @@ module RVV(
 );
 
 wire [6:0] SEW_decoded;
-wire [4:0] LMUL_decoded; 
+wire [3:0] LMUL_decoded; 
 wire reset_debounced;
 wire valid_lmul, valid_sew;
 wire vsetup_en_id;
-wire [8:0] vl_in_id;
-wire [8:0] avl_in_id;
-wire [8:0] vl_id;
+wire [7:0] vl_in_id;
+wire [7:0] avl_in_id;
+wire [7:0] vl_id;
 wire [6:0] vtype_id;
-wire [8:0] avl_id;
+wire [7:0] avl_id;
 wire [63:0] rdA_id, rdB_id;          // Read data A/B
 
 button_synchronizer button_sync (
@@ -54,18 +54,20 @@ vl_setup vl_setup_unit (            //will problably change with the
 reg vsetup_en_ex;
 reg [2:0] sew_encoded_ex, lmul_encoded_ex;
 reg [6:0] vtype_ex;
-reg [8:0] avl_in_ex;
-reg [8:0] vl_in_ex;
-reg [8:0] vl_ex;
+reg [7:0] avl_in_ex;
+reg [7:0] vl_in_ex;
+reg [7:0] vl_ex;
 reg [31:0] alu_scalar_in_ex;
 reg [63:0] rdA_ex, rdB_ex;
-reg [8:0] avl_ex;
+reg [7:0] avl_ex;
 
 reg [3:0] lmul_ex;
 wire [3:0] lmul_id;
 reg lmul_stall_ex;
 wire lmul_stall_id;
 wire [4:0] raA_group, raB_group, rdest_group;
+wire [4:0] vl_per_reg_id;
+reg [4:0] vl_per_reg_ex;
 ////////////////////////////////////////////////////////////
 
 vRegFile vRegFile_unit (
@@ -102,6 +104,12 @@ grouping_selector grouping_selector_unit (
     .rdest_out(rdest_group)
 );
 
+// vl_per_reg_calculator vl_per_reg_calculator_unit (
+//     .lmul_reg(vtype_id[2:0]), // encoded LMUL from vregfile
+//     .vl(vl_id),
+//     .vl_per_reg(vl_per_reg_id) // VL per register output
+// );
+
 always@(posedge clk) begin
     if (!rst) begin
         lmul_encoded_ex <= 3'd0;
@@ -117,6 +125,7 @@ always@(posedge clk) begin
         avl_ex <= 9'd0;
         lmul_ex <= 4'd0;
         lmul_stall_ex <= 1'b0;
+        vl_per_reg_ex <= 5'd0;
     end
     else begin
         lmul_encoded_ex <= lmul_encoded_id;
@@ -132,6 +141,7 @@ always@(posedge clk) begin
         avl_ex <= avl_id;
         lmul_ex <= lmul_id;
         lmul_stall_ex <= lmul_stall_id;
+        vl_per_reg_ex <= vl_per_reg_id;
     end
 end
 ////////////////////////////////////////////////////////////

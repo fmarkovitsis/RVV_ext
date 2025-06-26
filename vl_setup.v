@@ -10,16 +10,16 @@ module vl_setup (
     );
 
     input[6:0] SEW;
-    input[4:0] lmul;
-    input[8:0] AVL;
+    input[3:0] lmul;
+    input[7:0] AVL;
     input valid_lmul;
     input valid_sew;
 
     output vsetup_en;
-    output reg [8:0] vl;
-    output reg [8:0]  new_AVL;
+    output reg [7:0] vl;
+    output reg [7:0]  new_AVL;
 
-    reg [8:0] curr_vlmax;
+    reg [7:0] curr_vlmax;
     reg [2:0] temp;
 
     parameter [6:0] VLEN = 8'd64; 
@@ -54,7 +54,7 @@ module vl_setup (
 
 
         if (valid_lmul && valid_sew) begin
-            if (curr_vlmax <= AVL) begin
+            if (curr_vlmax <= AVL) begin   /// may need to add stall mechanism there
                     vl = curr_vlmax;
                     new_AVL = AVL - curr_vlmax;
             end
@@ -63,7 +63,7 @@ module vl_setup (
                 new_AVL = 9'd0;
             end
         end
-        else begin
+        else begin // to avoid latches
             vl = 9'd0;
             new_AVL = 9'd0;
         end
