@@ -12,7 +12,7 @@ module vALU (
 
     input[63:0]    reg_in1, reg_in2;
     input[63:0]    reg_scalar_in;
-    input[2:0]      valu_op;
+    input[3:0]      valu_op;
     input[2:0]      SEW;
 
     output reg [63:0] reg_dest;         
@@ -28,7 +28,7 @@ module vALU (
         reg_dest = 64'b0;
 
         case (valu_op)
-            3'b000: begin   //000 -> elementwise addition
+            4'b0000: begin   //000 -> elementwise addition
                 case (SEW)
                     3'b000:   begin
                         for (i=0; i < (VLEN>>2); i=i+1) begin
@@ -56,7 +56,7 @@ module vALU (
                 endcase   
             end
             
-            3'b001: begin   //001 -> vector + scalar addition (both from reg and immediate)
+            4'b0001: begin   //001 -> vector + scalar addition (both from reg and immediate)
                 case (SEW)
                     3'b000: begin
                         for (i=0; i < (VLEN>>2); i=i+1) begin
@@ -84,7 +84,7 @@ module vALU (
                 endcase
             end
 
-            3'b010: begin   // 010 -> elementwise subtraction
+            4'b0010: begin   // 010 -> elementwise subtraction
                 case (SEW)
                     3'b000:   begin
                         for (i=0; i < (VLEN>>2); i=i+1) begin
@@ -112,7 +112,7 @@ module vALU (
                 endcase   
             end
 
-            3'b011: begin   //011 -> vector - scalar subtraction (both from reg and immediate)
+            4'b0011: begin   //011 -> vector - scalar subtraction (both from reg and immediate)
                 case (SEW)
                     3'b000:   begin
                         for (i=0; i < (VLEN>>2); i=i+1) begin
@@ -140,7 +140,7 @@ module vALU (
                 endcase 
             end
 
-            3'b100: begin   //100 -> elementwise multiplication
+            4'b0100: begin   //100 -> elementwise multiplication
                 case (SEW)
                     3'b000:   begin
                         for (i=0; i < (VLEN>>2); i=i+1) begin
@@ -173,7 +173,7 @@ module vALU (
                 endcase 
             end
 
-            3'b101: begin   //101 -> vector * scalar (both from reg and immediate)
+            4'b0101: begin   //101 -> vector * scalar (both from reg and immediate)
                 case (SEW)
                     3'b000:   begin
                         for (i=0; i < (VLEN>>2); i=i+1) begin
@@ -206,87 +206,18 @@ module vALU (
                 endcase
             end
 
-            3'b110: begin   //find min
-                temp = 63'd0;
-                case (SEW)
-                    3'b000: begin
-                        for (i=0; i < (VLEN>>2); i=i+1) begin
-                            if (temp > $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b001: begin
-                        for (i=0; i < (VLEN>>3); i=i+1) begin
-                            if (temp > $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b010: begin
-                        for (i=0; i < (VLEN>>4); i=i+1) begin
-                            if (temp > $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b011: begin
-                        for (i=0; i < (VLEN>>5); i=i+1) begin
-                            if (temp > $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b100: begin
-                        reg_dest = reg_in1;
-                    end
-                endcase
+            4'b0110: begin //and
+                reg_dest = reg_in1 & reg_in2;  
             end
 
-            3'b111: begin   //find max
-                temp = 63'd0;
-                case (SEW)
-                    3'b000: begin
-                        for (i=0; i < (VLEN>>2); i=i+1) begin
-                            if (temp < $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b001: begin
-                        for (i=0; i < (VLEN>>3); i=i+1) begin
-                            if (temp < $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b010: begin
-                        for (i=0; i < (VLEN>>4); i=i+1) begin
-                            if (temp < $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b011: begin
-                        for (i=0; i < (VLEN>>5); i=i+1) begin
-                            if (temp < $signed(reg_in1)) begin
-                                temp = reg_in1;
-                            end
-                        end
-                        reg_dest = temp;
-                    end
-                    3'b100: begin
-                        reg_dest = reg_in1;
-                    end
-                endcase
-            end         
+            4'b0111: begin //or
+                reg_dest = reg_in1 | reg_in2;
+            end
+
+            4'b1000: begin //xor
+                reg_dest = reg_in1 ^ reg_in2;
+            end
+
             default:    begin
                             reg_dest = 64'b0;
                         end
