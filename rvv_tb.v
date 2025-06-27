@@ -59,6 +59,10 @@ module rvv_tb;
 // lmul 1 (no grouping)
 // h00_FF_00_FF_00_FF_00_FF + hFF_00_FF_00_FF_00_FF_00 = hFF_FF_FF_FF_FF_FF_FF_FF
         #20;
+        valu_op = 4'b0000; // addition
+        sew_encoded_id = 3'b001; // example SEW = 8-bit
+        lmul_encoded_id = 3'b000; // example LMUL = 1
+        AVL = 8'd16;
         // Write at reg 2
         wa = 5'd2;
         wd = 64'h00_FF_00_FF_00_FF_00_FF;
@@ -120,7 +124,6 @@ module rvv_tb;
         wd = 0;
         wen = 0;
         #50
-        alu_scalar_in_id = 32'h1;
         valu_op = 4'b0001; // vector + scalar addition
         sew_encoded_id = 3'b001; // SEW = 8-bit
         lmul_encoded_id = 3'b000; // LMUL = 1
@@ -135,6 +138,10 @@ module rvv_tb;
 // lmul 1 (no grouping)
 // h00_FF_00_FF_00_FF_00_FF + 1 = h01_00_01_00_01_00_01_00
         #20;
+        valu_op = 4'b0001; // vector + scalar addition
+        sew_encoded_id = 3'b001; // SEW = 8-bit
+        lmul_encoded_id = 3'b000; // LMUL = 1
+        AVL = 8'd16;
         // Write at reg 2
         wa = 5'd2;
         wd = 64'h00_FF_00_FF_00_FF_00_FF;
@@ -145,7 +152,7 @@ module rvv_tb;
 
         // Read from reg 2 and reg 3
         raA = 5'd2;
-        raB = 5'd3;
+        alu_scalar_in_id = 32'h1;
         #10;
 
         #50;
@@ -230,7 +237,7 @@ module rvv_tb;
 // elementwise subtraction
 // sew 16 
 // lmul 1 (no grouping)
-// h00_02_00_02_00_02_00_02 - h00_03_00_03_00_03_00_03 = h01_00_01_00_01_00_01_00  
+// h00_02_00_02_00_02_00_02 - h00_03_00_03_00_03_00_03 = hFF_FF_FF_FF_FF_FF_FF_FF  
        #20;
        sew_encoded_id = 3'b010; // SEW = 16-bit
 
@@ -247,7 +254,7 @@ module rvv_tb;
         wa = 0;
         wd = 0;
         wen = 0;
-        alu_scalar_in_id = 32'h0;
+        #50
         valu_op = 4'b0011; // vector - scalar subtraction
         sew_encoded_id = 3'b001; // SEW = 8-bit
         lmul_encoded_id = 3'b000; // LMUL = 1
@@ -262,6 +269,10 @@ module rvv_tb;
 // lmul 1 (no grouping)
 // h00_FF_00_FF_00_FF_00_FF - 1 = hFF_FE_FF_FE_FF_FE_FF_FE
         #20;
+        valu_op = 4'b0011; // vector - scalar subtraction
+        sew_encoded_id = 3'b001; // SEW = 8-bit
+        lmul_encoded_id = 3'b000; // LMUL = 1
+        AVL = 8'd16;
         // Write at reg 2
         wa = 5'd2;
         wd = 64'h00_FF_00_FF_00_FF_00_FF;
@@ -272,7 +283,7 @@ module rvv_tb;
 
         // Read from reg 2 and reg 3
         raA = 5'd2;
-        raB = 5'd3;
+        alu_scalar_in_id = 32'h1;
         #10;
 
         #50;
