@@ -38,8 +38,4 @@ module grouping_selector (
         end        
     end
 
-
-
-
-
 endmodule

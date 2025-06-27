@@ -1,8 +1,8 @@
 module vl_masking (
     input [63:0] reg_in1,
     input [63:0] reg_in2,
-    input [3:0] ef_lmul_deconded,   //this is how many iterations are left for reg grouping operation to finish
-    input [7:0] vl,
+    input [3:0] lmul_id,   //this is how many iterations are left for reg grouping operation to finish
+    input [6:0] vl,
     input [6:0] vtype,
     
     output reg [63:0] reg_in1_fin,
@@ -17,7 +17,7 @@ always @(*) begin
     current = 0;
     mask = 0;
 
-    if (ef_lmul_deconded > 1'b1) begin
+    if (lmul_id > 1'b1) begin
         reg_in1_fin = reg_in1;
         reg_in2_fin = reg_in2;
     end

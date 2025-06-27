@@ -4,7 +4,7 @@ module RVV(
     input [3:0] valu_op,
     input [2:0] sew_encoded_id,
     input [2:0] lmul_encoded_id,
-    input [7:0] AVL,                // Current available vector length
+    input [6:0] AVL,                // Current available vector length
     input [4:0] raA, raB, wa,      // Read addresses A/B, write address
     input [63:0] wd,              // Write data
     input [31:0] alu_scalar_in_id,
@@ -12,17 +12,17 @@ module RVV(
     output [63:0] alu_res
 );
 
-wire [6:0] SEW_decoded;
-wire [3:0] LMUL_decoded; 
+// wire [6:0] SEW_decoded;
+// wire [3:0] LMUL_decoded; 
 wire reset_debounced;
 wire valid_lmul, valid_sew;
 wire vsetup_en_id;
-wire [7:0] vl_in_id;
-wire [7:0] avl_in_id;
-wire [7:0] vl_id;
+wire [6:0] vl_in_id;
+wire [6:0] avl_in_id;
+wire [6:0] vl_id;
 wire [6:0] vtype_id;
-wire [7:0] avl_id;
-wire [63:0] rdA_id, rdB_id;          // Read data A/B
+wire [6:0] avl_id;
+wire [63:0] rdA_id, rdB_id, rdA_id_masked, rdB_id_masked;          // Read data A/B
 
 button_synchronizer button_sync (
     .clk(clk),
@@ -30,18 +30,18 @@ button_synchronizer button_sync (
     .new_button(reset_debounced)
 );
 
-vtype_decoder vtype_decoder_unit (
-    .SEW_encoded(sew_encoded_id),
-    .LMUL_encoded(lmul_encoded_id),
-    .SEW(SEW_decoded),
-    .lmul(LMUL_decoded),
-    .valid_lmul(valid_lmul),
-    .valid_sew(valid_sew)
-);
+// vtype_decoder vtype_decoder_unit (
+//     .SEW_encoded(sew_encoded_id),
+//     .LMUL_encoded(lmul_encoded_id),
+//     .SEW(SEW_decoded),
+//     .lmul(LMUL_decoded),
+//     .valid_lmul(valid_lmul),
+//     .valid_sew(valid_sew)
+// );
 
 vl_setup vl_setup_unit (            //will problably change with the
-    .SEW(SEW_decoded),              //implementation of vsetvl
-    .lmul(LMUL_decoded),            //or at least be updated
+    .SEW(sew_encoded_id),              //implementation of vsetvl
+    .lmul(lmul_encoded_id),            //or at least be updated
     .AVL(AVL),
     .valid_lmul(valid_lmul),
     .valid_sew(valid_sew),
@@ -54,20 +54,19 @@ vl_setup vl_setup_unit (            //will problably change with the
 reg vsetup_en_ex;
 reg [2:0] sew_encoded_ex, lmul_encoded_ex;
 reg [6:0] vtype_ex;
-reg [7:0] avl_in_ex;
-reg [7:0] vl_in_ex;
-reg [7:0] vl_ex;
+reg [6:0] avl_in_ex;
+reg [6:0] vl_in_ex;
+reg [6:0] vl_ex;
 reg [31:0] alu_scalar_in_ex;
 reg [63:0] rdA_ex, rdB_ex;
-reg [7:0] avl_ex;
+reg [6:0] avl_ex;
 
 reg [3:0] lmul_ex;
 wire [3:0] lmul_id;
 reg lmul_stall_ex;
 wire lmul_stall_id;
 wire [4:0] raA_group, raB_group, rdest_group;
-wire [4:0] vl_per_reg_id;
-reg [4:0] vl_per_reg_ex;
+
 ////////////////////////////////////////////////////////////
 
 vRegFile vRegFile_unit (
@@ -89,7 +88,6 @@ vRegFile vRegFile_unit (
 );
 
 
-
 grouping_selector grouping_selector_unit (
     .raA(raA),
     .raB(raB),
@@ -104,11 +102,16 @@ grouping_selector grouping_selector_unit (
     .rdest_out(rdest_group)
 );
 
-// vl_per_reg_calculator vl_per_reg_calculator_unit (
-//     .lmul_reg(vtype_id[2:0]), // encoded LMUL from vregfile
-//     .vl(vl_id),
-//     .vl_per_reg(vl_per_reg_id) // VL per register output
-// );
+vl_masking vl_masking_unit (
+    .reg_in1(rdA_id),
+    .reg_in2(rdB_id),
+    .lmul_id(lmul_id),   //this is how many iterations are left for reg grouping operation to finish
+    .vl(vl_id),
+    .vtype(vtype_id),
+    .reg_in1_fin(rdA_id_masked),
+    .reg_in2_fin(rdB_id_masked)
+);
+
 
 always@(posedge clk) begin
     if (!rst) begin
@@ -116,16 +119,15 @@ always@(posedge clk) begin
         sew_encoded_ex <= 3'd0;
         vsetup_en_ex <= 1'd0;
         vtype_ex <= 7'd0;
-        vl_in_ex <= 9'd0;
+        vl_in_ex <= 7'd0;
         alu_scalar_in_ex <= 32'd0;
         rdA_ex <= 64'd0;
         rdB_ex <= 64'd0;
-        avl_in_ex <= 9'd0;
-        vl_ex <= 9'd0;
-        avl_ex <= 9'd0;
+        avl_in_ex <= 7'd0;
+        vl_ex <= 7'd0;
+        avl_ex <= 7'd0;
         lmul_ex <= 4'd0;
         lmul_stall_ex <= 1'b0;
-        vl_per_reg_ex <= 5'd0;
     end
     else begin
         lmul_encoded_ex <= lmul_encoded_id;
@@ -134,14 +136,13 @@ always@(posedge clk) begin
         vtype_ex <= vtype_id;
         vl_in_ex <= vl_in_id;
         alu_scalar_in_ex <= alu_scalar_in_id;
-        rdA_ex <= rdA_id;
-        rdB_ex <= rdB_id;
+        rdA_ex <= rdA_id_masked;
+        rdB_ex <= rdB_id_masked;
         avl_in_ex <= avl_in_id;
         vl_ex <= vl_id;
         avl_ex <= avl_id;
         lmul_ex <= lmul_id;
         lmul_stall_ex <= lmul_stall_id;
-        vl_per_reg_ex <= vl_per_reg_id;
     end
 end
 ////////////////////////////////////////////////////////////
