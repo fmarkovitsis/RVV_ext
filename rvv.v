@@ -1,7 +1,7 @@
 module RVV(
     input clk,
     input rst,
-    input [2:0] valu_op,
+    input [3:0] valu_op,
     input [2:0] sew_encoded_id,
     input [2:0] lmul_encoded_id,
     input [7:0] AVL,                // Current available vector length
@@ -149,7 +149,7 @@ end
 vALU alu_unit (
     .reg_in1(rdA_ex),
     .reg_in2(rdB_ex),
-    .reg_scalar_in(alu_scalar_in_ex),
+    .reg_scalar_in({{32{alu_scalar_in_ex[31]}}, alu_scalar_in_ex}),
     .valu_op(valu_op),
     .SEW(vtype_ex[5:3]),
     .reg_dest(alu_res)
