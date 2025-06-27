@@ -25,8 +25,8 @@ always @(*) begin
         current = vl - ((VLEN >> (vtype[5:3] + 2'd3)) * ((1 << vtype[2:0]) - 1));
         mask = 64'hffffffff << (current * (1 << (vtype[5:3] + 3)));
 
-        reg_in1_fin = reg_in1 | mask;
-        reg_in2_fin = reg_in2 | mask;
+        reg_in1_fin = reg_in1 * mask;
+        reg_in2_fin = reg_in2 * mask;
     end
 end
     
