@@ -38,16 +38,21 @@ module grouping_selector (
 
     always @(*) begin
         
-        raA_out = raA + (MAX_LMUL - lmul_in);
-        raB_out = raB + (MAX_LMUL - lmul_in);
-        rdest_out = rdest + (MAX_LMUL - lmul_in);
+
         lmul_out = lmul_group - 1'd1;
         
         if (lmul_in > 1) begin
+            raA_out = raA + (lmul_reg_decoded - lmul_group);
+            raB_out = raB + (lmul_reg_decoded - lmul_group);
+            rdest_out = rdest + (lmul_reg_decoded - lmul_group);
             lmul_stall_out = 1'b1;
+
         end
         else begin 
             lmul_stall_out = 1'b0; // no stall signal for the grouping selector
+            raA_out = raA;
+            raB_out = raB;
+            rdest_out = rdest;
         end        
     end
 
