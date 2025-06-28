@@ -42,19 +42,15 @@ module grouping_selector (
         
 
         lmul_out = lmul_group_select - 1'd1;
+        raA_out = raA + (lmul_reg_decoded - lmul_group_select);
+        raB_out = raB + (lmul_reg_decoded - lmul_group_select);
+        rdest_out = rdest + (lmul_reg_decoded - lmul_group_select);
         
         if (lmul_in > 1) begin
-            raA_out = raA + (lmul_reg_decoded - lmul_group_select);
-            raB_out = raB + (lmul_reg_decoded - lmul_group_select);
-            rdest_out = rdest + (lmul_reg_decoded - lmul_group_select);
             lmul_stall_out = 1'b1;
-
         end
         else begin 
             lmul_stall_out = 1'b0; // no stall signal for the grouping selector
-            raA_out = raA;
-            raB_out = raB;
-            rdest_out = rdest;
         end        
     end
 
