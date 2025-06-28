@@ -20,8 +20,21 @@ module grouping_selector (
 
     parameter [3:0] MAX_LMUL = 4'd8;
     wire [3:0] lmul_in;
+    wire [3:0] lmul_reg_decoded;
 
-    assign lmul_in = (lmul_stall_in) ? lmul_group : lmul_reg; // Use the lmul from the previous grouping selector operation output
+
+    assign lmul_in = (lmul_stall_in) ? lmul_group : lmul_reg_decoded; // Use the lmul from the previous grouping selector operation output
+
+    always @(*) begin
+        case (lmul_reg)
+            3'b000: lmul_reg_decoded = 4'd1; // LMUL = 1
+            3'b001: lmul_reg_decoded = 4'd2; // LMUL = 2
+            3'b010: lmul_reg_decoded = 4'd4; // LMUL = 4
+            3'b011: lmul_reg_decoded = 4'd8; // LMUL = 8
+            default: lmul_reg_decoded = MAX_LMUL; // Default to MAX_LMUL if invalid input
+        endcase
+    end
+
 
     always @(*) begin
         
