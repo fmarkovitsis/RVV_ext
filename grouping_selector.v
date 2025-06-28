@@ -21,10 +21,8 @@ module grouping_selector (
     parameter [3:0] MAX_LMUL = 4'd8;
     wire [3:0] lmul_in;
     wire [3:0] lmul_reg_decoded;
-    wire [3:0] lmul_group_select;
 
     assign lmul_in = (lmul_stall_in) ? lmul_group : lmul_reg_decoded; // Use the lmul from the previous grouping selector operation output
-    assign lmul_group_select = (lmul_stall_in) ? lmul_reg_decoded : lmul_group; // Use the lmul from the previous grouping selector operation output
 
 
     always @(*) begin
@@ -42,11 +40,11 @@ module grouping_selector (
         
 
         lmul_out = lmul_group_select - 1'd1;
-        raA_out = raA + (lmul_reg_decoded - lmul_group_select);
-        raB_out = raB + (lmul_reg_decoded - lmul_group_select);
-        rdest_out = rdest + (lmul_reg_decoded - lmul_group_select);
+        raA_out = raA + (lmul_reg_decoded - lmul_in);
+        raB_out = raB + (lmul_reg_decoded - lmul_in);
+        rdest_out = rdest + (lmul_reg_decoded - lmul_in);
         
-        if (lmul_in > 1) begin
+        if (lmul_in > 0) begin
             lmul_stall_out = 1'b1;
         end
         else begin 
