@@ -1,10 +1,10 @@
-`ifndef TESTBENCH
-`include "constants.vh"
-`include "config.vh"
-`else
-`include "../includes/constants.vh"
-`include "../includes/config.vh"
-`endif
+//`ifndef TESTBENCH
+//`include "constants.vh"
+//`include "config.vh"
+//`else
+//`include "../includes/constants.vh"
+//`include "../includes/config.vh"
+//`endif
 
 
 /*****************************************************************************************/
@@ -80,7 +80,7 @@ reg 	[4:0]	IDEX_instr_vrd;
 reg		[1:0]	IDEX_valu_src;
 reg		[4:0]	IDEX_simm5;
 reg				IDEX_vRegWrite;
-reg				IDEX_valu_op;
+reg		[3:0]	IDEX_valu_op;
 reg 	[63:0] 	IDEX_rdvA, IDEX_rdvB;
 reg		[6:0]	IDEX_vl;
 reg		[6:0]	IDEX_vtype;
@@ -127,7 +127,7 @@ wire			bubble_ifid, bubble_idex, bubble_exmem, bubble_memwb;   // create a NOP i
 wire			write_ifid, write_idex, write_exmem, write_memwb, write_pc;  // enable/disable pipeline registers
 wire	[6:0]	opcode;
 wire	[2:0]	funct3, ALUcntrl; 
-wire    [9:0]   zimm;
+wire    [10:0]   zimm;
 wire			imm_ind, imm_ind2;
 wire	[9:0]	vtypei;
 wire	[4:0]	uimm;
@@ -409,8 +409,9 @@ vRegFile cpu_vregs (
 	.rst(reset),
 	.raA(instr_rs1),
 	.raB(instr_rs2),
-	.wa(0), 	//must be added after memwb is good
-	.wen(0),	//must be added after memwb is good
+	.wa(5'h0), 	//must be added after memwb is good
+	.wen(1'b0),
+	.wd(64'd0),	//must be added after memwb is good
 	.vl_in(IDEX_new_vl),		//add when idex is good
 	.AVL_in(IDEX_new_AVL),		//add when idex is good
 	.vtype_in (IDEX_new_vtype),	//add when idex is good
