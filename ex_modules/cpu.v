@@ -1,10 +1,10 @@
-//`ifndef TESTBENCH
-//`include "constants.vh"
-//`include "config.vh"
-//`else
-//`include "../includes/constants.vh"
-//`include "../includes/config.vh"
-//`endif
+`ifndef TESTBENCH
+`include "constants.vh"
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
 
 
 /*****************************************************************************************/
@@ -80,6 +80,7 @@ reg 	[4:0]	IDEX_instr_vrd;
 reg		[1:0]	IDEX_valu_src;
 reg		[4:0]	IDEX_simm5;
 reg				IDEX_vRegWrite;
+reg     [4:0]   IDEX_vRegWrite_Address;
 reg		[3:0]	IDEX_valu_op;
 reg 	[63:0] 	IDEX_rdvA, IDEX_rdvB;
 reg		[6:0]	IDEX_vl;
@@ -113,6 +114,7 @@ reg		[4:0]	MEMWB_RegWriteAddr;
 reg		[31:0]	MEMWB_ALUOut;
 reg				MEMWB_MemToReg, MEMWB_RegWrite;
 reg 	[1:0] 	MEMWB_reg_type;
+reg     [4:0]   MEMWB_instr_vrd;
 // alu signals
 reg 	[31:0] 	ALUInA, ALUInB;
 wire 	[31:0] 	bypassOutA, bypassOutB;
@@ -133,7 +135,9 @@ wire	[9:0]	vtypei;
 wire	[4:0]	uimm;
 wire	[5:0]	funct6;
 wire	[4:0]	simm5;
+wire    [4:0]   instr_vrd;
 wire	[63:0]	simm64;
+
 wire	[63:0]	scalar_in_64;
 wire	[63:0]	dataA_64;
 // csr registers
@@ -159,9 +163,10 @@ reg      		EXMEM_csr_immidiate;
 reg      		MEMWB_csr_immidiate;
 
 reg		[63:0]	EXMEM_vALU_Out;
+reg     [63:0]  MEMWB_vALU_Out;
 reg		[4:0]	EXMEM_instr_vrd;
 reg				EXMEM_vRegWrite;
-
+reg             MEMWB_vRegWrite;
 
 wire	[6:0]	funct7;
 wire	[4:0]	instr_rs1, instr_rs2, instr_rd, RegWriteAddr;
@@ -409,9 +414,9 @@ vRegFile cpu_vregs (
 	.rst(reset),
 	.raA(instr_rs1),
 	.raB(instr_rs2),
-	.wa(5'h0), 	//must be added after memwb is good
-	.wen(1'b0),
-	.wd(64'd0),	//must be added after memwb is good
+	.wa(MEMWB_instr_vrd), 	//must be added after memwb is good
+	.wen(MEMWB_vRegWrite),	//must be added after memwb is good
+	.wd(MEMWB_vALU_Out), //must be added after memwb is good
 	.vl_in(IDEX_new_vl),		//add when idex is good
 	.AVL_in(IDEX_new_AVL),		//add when idex is good
 	.vtype_in (IDEX_new_vtype),	//add when idex is good
@@ -496,6 +501,7 @@ begin
 		IDEX_valu_src	<= 2'b11;
 		IDEX_simm5		<= 5'b0;
 		IDEX_vRegWrite	<= 1'b0;
+		IDEX_vRegWrite_Address <= 5'b0; // added for vRegWrite
 		IDEX_valu_op	<= 4'b1111;
 		IDEX_rdvA		<= 64'b0;
 		IDEX_rdvB		<= 64'b0;
@@ -540,6 +546,7 @@ begin
 			IDEX_simm5		<= 5'b0;
 			IDEX_valu_op	<= valu_op;
 			IDEX_vRegWrite  <= vRegWrite;
+			IDEX_vRegWrite_Address <= 5'd0; // added for vRegWrite
 			IDEX_rdvA		<= 64'b0;
 			IDEX_rdvB		<= 64'b0;
 			IDEX_vl			<= vl;
@@ -949,6 +956,9 @@ begin
 		MEMWB_csr_write_allowed <= 1'b0;
 		MEMWB_PC			<= 32'b0;
 		MEMWB_instr			<= 32'b0;
+		MEMWB_instr_vrd     <= 5'd0;
+		MEMWB_vALU_Out      <= 64'b0;
+		MEMWB_vRegWrite		<= 1'b0;
 	end 
 	else 
 	begin
@@ -965,6 +975,9 @@ begin
 			MEMWB_csr_write_allowed <= 1'b0;
 			MEMWB_PC			<= 32'hffffffff;
 			MEMWB_instr			<= 32'b0;
+			MEMWB_instr_vrd	    <= 5'd0;
+			MEMWB_vALU_Out      <= 64'b0;
+			MEMWB_vRegWrite		<= 1'b0;
 		end 
 		else if (write_memwb == 1'b1) begin
 			MEMWB_DMemOut		<= DMemOut;
@@ -979,6 +992,9 @@ begin
 			MEMWB_csr_write_allowed <= EXMEM_csr_write_allowed;
 			MEMWB_PC			<= EXMEM_PC;
 			MEMWB_instr			<= EXMEM_instr;
+			MEMWB_instr_vrd		<= EXMEM_instr_vrd;
+			MEMWB_vALU_Out      <= EXMEM_vALU_Out;
+			MEMWB_vRegWrite		<= EXMEM_vRegWrite;
 		end
 	end
 end
