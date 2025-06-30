@@ -27,7 +27,7 @@ module grouping_selector (
         endcase
     end
 
-    assign stall = (cnt_in < lmul_reg_decoded - 1) ? 1 : 3'd0;
+    assign stall = (cnt_in < lmul_reg_decoded - 1) ? 1 : 1'd0;
     assign cnt_out = (cnt_in < lmul_reg_decoded - 1) ? cnt_in + 1 : 3'd0;
     assign rdest_out = rdest + cnt_in;
     assign raA_out = raA + cnt_in;
