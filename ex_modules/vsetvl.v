@@ -1,10 +1,10 @@
-// `ifndef TESTBENCH
+`ifndef TESTBENCH
 `include "constants.vh"
-// `include "config.vh"
-// `else
-// `include "../includes/constants.vh"
-// `include "../includes/config.vh"
-// `endif
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
 
 
 module vsetvl (         //we are currently recognising only vsetivli and vsetvli

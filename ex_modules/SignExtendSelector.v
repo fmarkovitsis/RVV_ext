@@ -1,10 +1,10 @@
-//`ifndef TESTBENCH
-//`include "constants.vh"
-//`include "config.vh"
-//`else
-//`include "../includes/constants.vh"
-//`include "../includes/config.vh"
-//`endif
+`ifndef TESTBENCH
+`include "constants.vh"
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
 
 
 module SignExtendSelector(	output reg [31:0] out,

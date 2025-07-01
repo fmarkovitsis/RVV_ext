@@ -73,6 +73,10 @@ wire	[6:0]	new_vtype;
 //************ vReg File ************
 //*********** vctrl Unit ************
 wire 			vRegWrite;
+wire            grouping_enable;
+//*********** grouping selector ************
+wire            grouping_stall;
+wire    [4:0]   raA_group, raB_group, rdest_group;
 //*********** vctrl Unit ************
 wire	[1:0]	valu_src;
 
@@ -173,6 +177,9 @@ wire	[4:0]	instr_rs1, instr_rs2, instr_rd, RegWriteAddr;
 wire	[3:0]	ALUOp;
 wire	[1:0]	bypassA, bypassB;
 wire	[31:0]	imm_i, imm_s, imm_b, imm_u, imm_j, imm_z;
+reg     [2:0]   IDEX_grouping_cnt;
+wire    [2:0]   grouping_cnt;
+
 reg keepDelayInstr=0;
 
 wire	[3:0]	valu_op;
@@ -356,6 +363,7 @@ assign instr_vrd	= IFID_instr[11:7];
 assign funct6		= IFID_instr[31:26];	//for arithmetic operations
 assign simm5		= IFID_instr[19:15];
 
+
 // can also probably add illegal instruction checks here as well
 // just OR it with syscall and give it to the control stall unit
 assign syscall		= (IDEX_Jump==1'b0 & 
@@ -412,8 +420,8 @@ RegFile cpu_regs (
 vRegFile cpu_vregs (
 	.clk(clock),
 	.rst(reset),
-	.raA(instr_rs1),
-	.raB(instr_rs2),
+	.raA(raA_group),	//added for grouping
+	.raB(raB_group),	//added for grouping
 	.wa(MEMWB_instr_vrd), 	//must be added after memwb is good
 	.wen(MEMWB_vRegWrite),	//must be added after memwb is good
 	.wd(MEMWB_vALU_Out), //must be added after memwb is good
@@ -498,6 +506,7 @@ begin
 
 
 		IDEX_instr_vrd	<= 64'b0;
+		IDEX_grouping_cnt <= 3'b0; // added for grouping
 		IDEX_valu_src	<= 2'b11;
 		IDEX_simm5		<= 5'b0;
 		IDEX_vRegWrite	<= 1'b0;
@@ -539,8 +548,9 @@ begin
 			IDEX_csr_addr	<= 12'b0;
 			IDEX_csr_write_allowed <= 1'b0;
 			IDEX_PC			<= 32'hffffffff;
-
+			
 			//will need help with this one
+			IDEX_grouping_cnt <= 3'b0; // added for grouping
 			IDEX_instr_vrd	<= 64'b0;
 			IDEX_valu_src	<= 2'b11;
 			IDEX_simm5		<= 5'b0;
@@ -582,7 +592,8 @@ begin
 			IDEX_csr_addr	<= csr_addr;
 			IDEX_csr_write_allowed <= csr_write_allowed;
 
-			IDEX_instr_vrd	<= instr_vrd;
+			IDEX_grouping_cnt <= grouping_cnt; // added for grouping
+			IDEX_instr_vrd	<= rdest_group;
 			IDEX_valu_src	<= valu_src;
 			IDEX_vRegWrite	<= vRegWrite;
 			IDEX_valu_op	<= valu_op;
@@ -710,10 +721,27 @@ vcontrol_unit vcontrol_unit(
 	.vRegWrite(vRegWrite),
 	.valu_op(valu_op),
 	.valu_src(valu_src),
+	.grouping_enable(grouping_enable),
 	.funct3(funct3),
 	.funct6(funct6),
 	.opcode(opcode)
 );
+
+
+grouping_selector grouping_selector_unit (
+	.raA(instr_rs1),
+	.raB(instr_rs2),
+	.rdest(instr_vrd),
+	.lmul_reg(vtype[2:0]),
+	.cnt_in(IDEX_grouping_cnt),
+	.grouping_enable(grouping_enable),
+	.cnt_out(grouping_cnt),
+	.stall(grouping_stall),
+	.raA_out(raA_group),
+	.raB_out(raB_group),
+	.rdest_out(rdest_group)
+);
+
 ////////////////////////////////////////////////////
 
 // Control Unit that generates stalls and bubbles to pipeline stages

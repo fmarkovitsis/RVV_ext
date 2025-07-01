@@ -1,5 +1,14 @@
 //mayhaps need to change here how SEW is used
 //either that or there will be a translator outside
+`ifndef TESTBENCH
+`include "constants.vh"
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
+//mayhaps need to change here how SEW is used
+//either that or there will be a translator outside
 
 module vALU (
         reg_in1,

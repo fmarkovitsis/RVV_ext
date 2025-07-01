@@ -1,10 +1,10 @@
-// `ifndef TESTBENCH
+`ifndef TESTBENCH
 `include "constants.vh"
-// `include "config.vh"
-// `else
-// `include "../includes/constants.vh"
-// `include "../includes/config.vh"
-// `endif
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
 
 module vRegFile (
     input clk,
@@ -28,7 +28,7 @@ module vRegFile (
     integer i;
 
     // Write and reset logic
-    always @(posedge clk) begin
+    always @(posedge clk or negedge rst) begin
         if (!rst) begin
             for (i = 0; i < 32; i = i + 1)
                 data[i] <= 64'd0;

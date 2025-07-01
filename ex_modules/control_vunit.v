@@ -1,9 +1,17 @@
+`ifndef TESTBENCH
 `include "constants.vh"
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
+
 
 module vcontrol_unit (
     output reg vRegWrite,
     output reg [3:0] valu_op,
     output reg [1:0] valu_src,
+    output reg grouping_enable,
 
     input [2:0] funct3,
     input [5:0] funct6,
@@ -16,6 +24,7 @@ module vcontrol_unit (
                     `VV_FORMAT: begin
                         valu_src = 2'b00;
                         vRegWrite = 1'b1;
+                        grouping_enable = 1'b1; 
                         case (funct6)
                             `VADD: begin
                                 valu_op = 4'b0;
@@ -43,6 +52,7 @@ module vcontrol_unit (
                     `VX_FORMAT: begin
                         valu_src = 2'b01;
                         vRegWrite = 1'b1;
+                        grouping_enable = 1'b1; 
                         case (funct6)
                             `VADD: begin
                                 valu_op = 4'b0001;
@@ -70,6 +80,7 @@ module vcontrol_unit (
                     `VI_FORMAT: begin
                         valu_src = 2'b10;
                         vRegWrite = 1'b1;
+                        grouping_enable = 1'b1; 
                         case (funct6)
                             `VADD: begin
                                 valu_op = 4'b0001;
@@ -98,11 +109,13 @@ module vcontrol_unit (
                         valu_src = 2'b11;
                         vRegWrite = 1'b0;
                         valu_op = 4'b1111;
+                        grouping_enable = 1'b0; 
                     end
                     default: begin
                         valu_src = 2'b11;
                         vRegWrite = 1'b0;
                         valu_op = 4'b1111;
+                        grouping_enable = 1'b0;
                     end
                 endcase
             end

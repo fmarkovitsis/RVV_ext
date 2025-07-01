@@ -1,10 +1,10 @@
-// `ifndef TESTBENCH
+`ifndef TESTBENCH
 `include "constants.vh"
-// `include "config.vh"
-// `else
-// `include "../includes/constants.vh"
-// `include "../includes/config.vh"
-// `endif
+`include "config.vh"
+`else
+`include "../includes/constants.vh"
+`include "../includes/config.vh"
+`endif
 
 module sign_ext_64_selector (
     input       [1:0]   valu_src,
