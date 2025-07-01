@@ -799,7 +799,7 @@ assign RegWriteAddr = (IDEX_RegDst==1'b0) ? IDEX_instr_rs2 : IDEX_instr_rd;
 
 sign_ext_64 sign_ext_64_unit (
 	.simm5(IDEX_simm5),
-	.scalar_in(IDEX_rdA),
+	.scalar_in(bypassOutA),
 	.simm64(simm64),
 	.scalar_in_64(scalar_in_64)
 );
