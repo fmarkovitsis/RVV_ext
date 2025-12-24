@@ -68,11 +68,14 @@ This directory contains the Verilog/SystemVerilog source code defining the hardw
 
 | Module Type | Description |
 |---|---|
-| **Vector Arithmetic** | ALUs optimized for parallel integer and floating-point vector operations. |
-| **Control Logic** | Decoders and sequencers handling RVV instruction dispatching. |
-| **Register File** | Large vector register file (VRF) supporting multi-read/write ports. |
-| **Memory Interface** | Load/Store units handling vector memory alignment and striding. |
-
+| **sign_ext_64.v** | Extends the sign ofa bit vector to 64 bits. |
+| **sign_ext_64_selector.v** | Secects between a vector register and a sign-extended scalar, depending on a given command. |
+| **vRegFile.v** | Vector Register File. |
+| **valu.v** | ALU that performs vector operations. |
+| **vcontrol_bypass.v** | Bypass unit for resolving data dependencies within different stages of the pipeline without stalls. |
+| **vgrouping_selector.v** | Controlls how many registers are grouped in order to exoress larger dimension vectors. |
+| **vl_masking.v** | Masks off bit vector elements that are not needed, depending on the decided bit vector legth. |
+| **valu.v** | Calculates vector length (vl) based on SEW, vector resitster grouping and AVL, while also updating the value of AVL. |
 </details>
 
 ### 🧪 Verification & Simulation
