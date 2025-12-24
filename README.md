@@ -94,7 +94,7 @@ Contains simulation scripts and test vectors to verify individual modules.
 
 ## 🛠️ System Architecture
 
-The design follows a decoupled architecture where the scalar core handles control flow while offloading vector instructions to the VPU.
+The design aims to seemlessly handle both scalar and vector instructions, using the already implemented control unit. Whenever a scalar instruction is executed, the VPU stays in an idle state, not able to write on registers or memory, while when a vector instruction is executed, the opposite occurs.
 
 ---
 
