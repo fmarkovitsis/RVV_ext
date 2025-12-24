@@ -267,10 +267,10 @@ RVV_ext/
 ├── COMPLETE_CPU_and_RVV/                # FINAL RTL source files for both the vanilla and RVV units 
 ├── COMPLETE_CPU_and_RVV_zedboard/       # Same files with COMPLETE_CPU_and_RVV, included constrain files and tested on zedboard
 ├── RawSourceFiles                       # A functional version of the RVV extension, yet incomplete 
-├── DATED_files/                         # Historical design versions
+├── DATED_files/                         # Archive of the design versions
 ├── Project - Parallel Architecture.pdf  # A presentation explaining further the sub-units implemented for the extension
 ├── Vector_Instructions_Project.pdf/     # A report, describing the implemented modules and the supported instructions
-└── README.md              # This file
+└── README.md                            # This file
 ```
 
 ---
