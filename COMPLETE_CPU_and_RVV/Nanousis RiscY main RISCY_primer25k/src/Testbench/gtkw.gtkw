@@ -1,0 +1,159 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Jul  3 05:10:21 2025
+[*]
+[dumpfile] "/home/nbellas/Documents/pray_that_this_works/working/Nanousis RiscY main RISCY_primer25k/src/Testbench/ZSOC.vcd"
+[dumpfile_mtime] "Thu Jul  3 05:09:59 2025"
+[dumpfile_size] 756195
+[savefile] "/home/nbellas/Documents/pray_that_this_works/working/Nanousis RiscY main RISCY_primer25k/src/Testbench/gtkw.gtkw"
+[timestart] 0
+[size] 1853 940
+[pos] 0 1
+*-17.046562 157200 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[treeopen] test.TOP.
+[treeopen] test.TOP.cpu_1.
+[sst_width] 290
+[signals_width] 367
+[sst_expanded] 1
+[sst_vpaned_height] 402
+@28
+test.TOP.cpu_1.reset
+test.TOP.cpu_1.clock
+@800200
+-Temp Registers
+@200
+-their alu
+@22
+test.TOP.cpu_1.cpu_alu.out[31:0]
+@200
+-Original Registers
+@24
+test.TOP.cpu_1.cpu_regs.\data[20][31:0]
+test.TOP.cpu_1.cpu_regs.\data[21][31:0]
+test.TOP.cpu_1.cpu_regs.\data[23][31:0]
+@200
+-Vector Registers
+@28
+test.TOP.cpu_1.IDEX_new_vtype[6:0]
+test.TOP.cpu_1.IDEX_vtype[6:0]
+test.TOP.cpu_1.new_vtype[6:0]
+test.TOP.cpu_1.vtype[6:0]
+test.TOP.cpu_1.vALU_unit.SEW[2:0]
+@22
+test.TOP.cpu_1.vALU_unit.reg_scalar_in[63:0]
+test.TOP.cpu_1.vALU_unit.reg_in1[63:0]
+test.TOP.cpu_1.vALU_unit.reg_in2[63:0]
+test.TOP.cpu_1.IDEX_instr[31:0]
+test.TOP.cpu_1.EXMEM_instr[31:0]
+test.TOP.cpu_1.rdvA[63:0]
+@28
+test.TOP.cpu_1.vcontrol_unit.high
+test.TOP.cpu_1.IDEX_high
+test.TOP.cpu_1.EXMEM_high
+test.TOP.cpu_1.vcontrol_unit.vmemw_en
+test.TOP.cpu_1.IDEX_vmemw_en
+test.TOP.cpu_1.EXMEM_vmemw_en
+test.TOP.cpu_1.wen
+@22
+test.TOP.cpu_1.data_out[31:0]
+@28
+test.TOP.cpu_1.byte_select_vector[3:0]
+test.TOP.cpu_1.byte_select[3:0]
+@22
+test.TOP.cpu_1.vs_selector.vs_data_in[63:0]
+test.TOP.cpu_1.vs_selector.vs_data_out[31:0]
+@c00022
+test.TOP.cpu_1.data_addr[31:0]
+@28
+(0)test.TOP.cpu_1.data_addr[31:0]
+(1)test.TOP.cpu_1.data_addr[31:0]
+(2)test.TOP.cpu_1.data_addr[31:0]
+(3)test.TOP.cpu_1.data_addr[31:0]
+(4)test.TOP.cpu_1.data_addr[31:0]
+(5)test.TOP.cpu_1.data_addr[31:0]
+(6)test.TOP.cpu_1.data_addr[31:0]
+(7)test.TOP.cpu_1.data_addr[31:0]
+(8)test.TOP.cpu_1.data_addr[31:0]
+(9)test.TOP.cpu_1.data_addr[31:0]
+(10)test.TOP.cpu_1.data_addr[31:0]
+(11)test.TOP.cpu_1.data_addr[31:0]
+(12)test.TOP.cpu_1.data_addr[31:0]
+(13)test.TOP.cpu_1.data_addr[31:0]
+(14)test.TOP.cpu_1.data_addr[31:0]
+(15)test.TOP.cpu_1.data_addr[31:0]
+(16)test.TOP.cpu_1.data_addr[31:0]
+(17)test.TOP.cpu_1.data_addr[31:0]
+(18)test.TOP.cpu_1.data_addr[31:0]
+(19)test.TOP.cpu_1.data_addr[31:0]
+(20)test.TOP.cpu_1.data_addr[31:0]
+(21)test.TOP.cpu_1.data_addr[31:0]
+(22)test.TOP.cpu_1.data_addr[31:0]
+(23)test.TOP.cpu_1.data_addr[31:0]
+(24)test.TOP.cpu_1.data_addr[31:0]
+(25)test.TOP.cpu_1.data_addr[31:0]
+(26)test.TOP.cpu_1.data_addr[31:0]
+(27)test.TOP.cpu_1.data_addr[31:0]
+(28)test.TOP.cpu_1.data_addr[31:0]
+(29)test.TOP.cpu_1.data_addr[31:0]
+(30)test.TOP.cpu_1.data_addr[31:0]
+(31)test.TOP.cpu_1.data_addr[31:0]
+@1401200
+-group_end
+@22
+test.TOP.cpu_1.cpu_vregs.\data[0][63:0]
+@25
+test.TOP.cpu_1.cpu_vregs.\data[1][63:0]
+@22
+test.TOP.cpu_1.cpu_vregs.\data[2][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[3][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[4][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[5][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[6][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[7][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[8][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[9][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[10][63:0]
+test.TOP.cpu_1.cpu_vregs.\data[11][63:0]
+@24
+test.TOP.cpu_1.grouping_selector_unit.rdest_out[4:0]
+@1000200
+-Temp Registers
+@22
+test.TOP.text.\charMemory[0][0:511]
+test.TOP.text.\charMemory[1][0:511]
+test.TOP.text.\charMemory[2][0:511]
+test.TOP.text.\charMemory[3][0:511]
+test.TOP.text.\charMemory[4][0:511]
+test.TOP.text.\charMemory[5][0:511]
+test.TOP.text.\charMemory[6][0:511]
+test.TOP.text.\charMemory[7][0:511]
+test.TOP.text.\charMemory[8][0:511]
+test.TOP.text.\charMemory[9][0:511]
+test.TOP.text.\charMemory[10][0:511]
+test.TOP.text.\charMemory[11][0:511]
+test.TOP.text.\charMemory[12][0:511]
+test.TOP.text.\charMemory[13][0:511]
+test.TOP.text.\charMemory[14][0:511]
+test.TOP.text.\charMemory[15][0:511]
+test.TOP.text.\charMemory[16][0:511]
+test.TOP.text.\charMemory[17][0:511]
+test.TOP.text.\charMemory[18][0:511]
+test.TOP.text.char_write[7:0]
+test.TOP.text.char_write_addr[15:0]
+@28
+test.TOP.text.clk
+test.TOP.text.error
+@420
+test.TOP.text.i
+test.TOP.text.j
+@22
+test.TOP.text.line[6:0]
+test.TOP.text.pixelAddress[9:0]
+test.TOP.text.pixelData[7:0]
+@28
+test.TOP.text.ren
+test.TOP.text.reset
+test.TOP.text.wen
+[pattern_trace] 1
+[pattern_trace] 0

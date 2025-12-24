@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1744794296">
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/config.vh">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/config.vh"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/constants.vh">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/constants.vh"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/vsync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/vsync.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/RISCYZedboard/test_behav.wcfg">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/sim_1/imports/RISCYZedboard/test_behav.wcfg"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/vga_zedboard-master/project_1.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../RiscyVivadoWorking/RiscyVivadoWorking.srcs/constrs_1/imports/vga_zedboard-master/project_1.xdc"/>
+        <Attr Name="ImportTime" Val="1744792297"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

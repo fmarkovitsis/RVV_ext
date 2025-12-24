@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 16 12:33:39 2025
+# Process ID: 24052
+# Current directory: /home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim
+# Command line: wbtcv -mode batch -source /home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim/xsim.dir/test_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim/webtalk.log
+# Journal file: /home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim/xsim.dir/test_func_synth/webtalk/xsim_webtalk.tcl -notrace

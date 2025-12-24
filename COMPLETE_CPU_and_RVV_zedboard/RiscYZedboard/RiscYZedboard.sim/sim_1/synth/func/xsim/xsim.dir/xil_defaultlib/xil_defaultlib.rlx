@@ -1,0 +1,6 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim/test_func_synth.v,1744796003,verilog,,/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v,,CSRFile;DPBRAM;DPBRAM_0;DPBRAM__parameterized0;PPU;RegFile;clint;cpu;glbl;horizontal;memory;top;vertical,,,../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src;../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU,,,,,
+/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v,1744792297,verilog,,,,test,,,../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src;../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU,,,,,

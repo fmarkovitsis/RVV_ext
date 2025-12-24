@@ -1,0 +1,101 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clint
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSRFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DPBRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPU
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:249]
+WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:251]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtendSelector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bus
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_branch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_bypass_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_stall_id
+WARNING: [VRFC 10-986] literal value truncated to fit in 1 bits [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v:115]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_vunit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vcontrol_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+WARNING: [VRFC 10-3380] identifier 'flushPipeline' is used before its declaration [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:328]
+WARNING: [VRFC 10-3380] identifier 'flushPipeline' is used before its declaration [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:674]
+WARNING: [VRFC 10-3380] identifier 'flushPipeline' is used before its declaration [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:705]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module horizontal
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_read_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_write_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_ext_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_ext_64_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol msw_irq, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:56]
+INFO: [VRFC 10-2458] undeclared symbol mtimer_irq, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:57]
+INFO: [VRFC 10-2458] undeclared symbol mext_irq, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:58]
+INFO: [VRFC 10-2458] undeclared symbol memReady, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:59]
+WARNING: [VRFC 10-2938] 'memReady' is already implicitly declared on line 59 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:72]
+INFO: [VRFC 10-2458] undeclared symbol btn_out, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:90]
+INFO: [VRFC 10-2458] undeclared symbol flash_data_out, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:91]
+INFO: [VRFC 10-2458] undeclared symbol counter27M, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:95]
+INFO: [VRFC 10-2458] undeclared symbol counter1M, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:96]
+INFO: [VRFC 10-2458] undeclared symbol clint_data_out, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:99]
+INFO: [VRFC 10-2458] undeclared symbol clint_ren, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:103]
+INFO: [VRFC 10-2458] undeclared symbol clint_wen, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:104]
+INFO: [VRFC 10-2458] undeclared symbol flash_ren, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:111]
+INFO: [VRFC 10-2458] undeclared symbol flash_wen, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:112]
+INFO: [VRFC 10-2458] undeclared symbol btn_ren, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:114]
+WARNING: [VRFC 10-2938] 'clint_ren' is already implicitly declared on line 103 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:120]
+WARNING: [VRFC 10-2938] 'clint_wen' is already implicitly declared on line 104 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:121]
+WARNING: [VRFC 10-2938] 'clint_data_out' is already implicitly declared on line 99 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:122]
+WARNING: [VRFC 10-2938] 'msw_irq' is already implicitly declared on line 56 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:123]
+WARNING: [VRFC 10-2938] 'mtimer_irq' is already implicitly declared on line 57 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:124]
+WARNING: [VRFC 10-2938] 'mext_irq' is already implicitly declared on line 58 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:125]
+WARNING: [VRFC 10-2938] 'btn_ren' is already implicitly declared on line 114 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:150]
+WARNING: [VRFC 10-2938] 'btn_out' is already implicitly declared on line 90 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:151]
+WARNING: [VRFC 10-2938] 'flash_ren' is already implicitly declared on line 111 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:162]
+WARNING: [VRFC 10-2938] 'flash_wen' is already implicitly declared on line 112 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:163]
+WARNING: [VRFC 10-2938] 'flash_data_out' is already implicitly declared on line 91 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:164]
+INFO: [VRFC 10-2458] undeclared symbol LCD_CLK, assumed default net type wire [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:348]
+WARNING: [VRFC 10-2938] 'counter1M' is already implicitly declared on line 96 [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:388]
+INFO: [VRFC 10-311] analyzing module Reset_Sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vRegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vRegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/valu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vcontrol_bypass.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vcontrol_bypass
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vgrouping_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module grouping_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vl_masking.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vl_masking
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vl_setup.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vl_setup
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vs_selector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vs_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vsetvl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vsetvl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/vsync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vertical
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test

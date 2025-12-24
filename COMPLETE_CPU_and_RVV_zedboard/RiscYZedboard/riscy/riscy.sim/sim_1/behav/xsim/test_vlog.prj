@@ -1,0 +1,41 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU" --include "../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_vunit.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64_selector.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vRegFile.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/valu.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vcontrol_bypass.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vgrouping_selector.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vl_masking.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vl_setup.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vs_selector.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/vsetvl.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/vsync.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

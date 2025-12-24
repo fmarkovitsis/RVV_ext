@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src" --include "../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU" \
+"test_func_synth.v" \
+"../../../../../RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v" \
+
+# Do not sort compile order
+nosort

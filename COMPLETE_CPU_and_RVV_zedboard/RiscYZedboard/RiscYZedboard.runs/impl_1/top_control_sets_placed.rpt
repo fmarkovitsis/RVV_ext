@@ -1,0 +1,178 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Wed Apr 16 13:04:53 2025
+| Host         : localhost.localdomain running 64-bit openSUSE Leap 15.4
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   100 |
+|    Minimum number of control sets                        |   100 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    81 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   100 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    88 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            5 |
+| No           | No                    | Yes                    |             151 |           55 |
+| No           | Yes                   | No                     |              12 |            6 |
+| Yes          | No                    | No                     |             159 |           86 |
+| Yes          | No                    | Yes                    |            1956 |          854 |
+| Yes          | Yes                   | No                     |              84 |           28 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                 Enable Signal                 |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | cpu_1/csrFile/pipeline_flush_count[3]_i_1_n_0 | reset2_IBUF                        |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_MemWrite_reg_1[0]         |                                    |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG |                                               |                                    |                5 |              5 |         1.00 |
+|  clk_IBUF_BUFG | mem/cnt[4]_i_1_n_0                            |                                    |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | ppu_inst/cur_sprite_buf[4]_i_1_n_0            | reset2_IBUF                        |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_MemWrite_reg_1[0]         | cpu_1/csrFile/EXMEM_funct3_reg[1]  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | ppu_inst/objectPointer[8]_i_1_n_0             |                                    |                3 |              9 |         3.00 |
+|  CLK_50_BUFG   | VSYNC/vaddr0                                  | reset2_IBUF                        |                3 |              9 |         3.00 |
+|  CLK_50_BUFG   | HSYNC/p_0_in                                  | reset2_IBUF                        |                3 |             10 |         3.33 |
+|  CLK_50_BUFG   | VSYNC/p_0_in                                  | reset2_IBUF                        |                4 |             11 |         2.75 |
+|  CLK_50_BUFG   |                                               | HSYNC/display_area_reg_0           |                6 |             12 |         2.00 |
+|  clk_IBUF_BUFG | clint_inst/reset2                             | ppu_inst/text_Buffer/mem_reg_9     |                4 |             12 |         3.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mtvec[31]_i_1_n_0               | reset2_IBUF                        |                8 |             30 |         3.75 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mstatus[31]_i_1_n_0             | reset2_IBUF                        |                7 |             30 |         4.29 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[16][31]_i_1_n_0           | reset2_IBUF                        |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | clint_inst/reset2                             |                                    |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mie[31]_i_1_n_0                 | reset2_IBUF                        |                6 |             32 |         5.33 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mscratch[31]_i_1_n_0            | reset2_IBUF                        |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mepc_state_reg_0[0]             | reset2_IBUF                        |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[20][31]_i_1_n_0           | reset2_IBUF                        |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/trap_vector[31]_i_1_n_0         | reset2_IBUF                        |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[1][31]_i_1_n_0            | reset2_IBUF                        |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[19][31]_i_1_n_0           | reset2_IBUF                        |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[18][31]_i_1_n_0           | reset2_IBUF                        |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[17][31]_i_1_n_0           | reset2_IBUF                        |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[15][31]_i_1_n_0           | reset2_IBUF                        |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[14][31]_i_1_n_0           | reset2_IBUF                        |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[13][31]_i_1_n_0           | reset2_IBUF                        |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[12][31]_i_1_n_0           | reset2_IBUF                        |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[11][31]_i_1_n_0           | reset2_IBUF                        |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[10][31]_i_1_n_0           | reset2_IBUF                        |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | clint_inst/reset2                             | cpu_1/csrFile/EXMEM_ALUOut_reg[20] |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/FSM_sequential_state_reg_2[0]   |                                    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mtval[31]_i_1_n_0               | reset2_IBUF                        |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mcause[31]_i_1_n_0              | reset2_IBUF                        |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | cpu_1/PC_reg[13]_0[0]                         |                                    |               28 |             32 |         1.14 |
+|  clk_IBUF_BUFG | cpu_1/delayed_instr[31]_i_2_n_0               | cpu_1/delayed_instr[31]_i_1_n_0    |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[9][31]_i_1_n_0            | reset2_IBUF                        |               23 |             32 |         1.39 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[8][31]_i_1_n_0            | reset2_IBUF                        |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[7][31]_i_1_n_0            | reset2_IBUF                        |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[6][31]_i_1_n_0            | reset2_IBUF                        |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[5][31]_i_1_n_0            | reset2_IBUF                        |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[4][31]_i_1_n_0            | reset2_IBUF                        |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[3][31]_i_1_n_0            | reset2_IBUF                        |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[31][31]_i_1_n_0           | reset2_IBUF                        |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[30][31]_i_1_n_0           | reset2_IBUF                        |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[2][31]_i_1_n_0            | reset2_IBUF                        |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[29][31]_i_1_n_0           | reset2_IBUF                        |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[28][31]_i_1_n_0           | reset2_IBUF                        |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[27][31]_i_1_n_0           | reset2_IBUF                        |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/E[0]                            | reset2_IBUF                        |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/E[1]                            | reset2_IBUF                        |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[26][31]_i_1_n_0           | reset2_IBUF                        |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[25][31]_i_1_n_0           | reset2_IBUF                        |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[24][31]_i_1_n_0           | reset2_IBUF                        |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/bubble_ifid_delayed_reg_1[0]    | reset2_IBUF                        |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[23][31]_i_1_n_0           | reset2_IBUF                        |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[22][31]_i_1_n_0           | reset2_IBUF                        |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | cpu_1/cpu_regs/data[21][31]_i_1_n_0           | reset2_IBUF                        |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/mepc[31]_i_1_n_0                | reset2_IBUF                        |               11 |             32 |         2.91 |
+|  CLK_50_BUFG   |                                               | reset2_IBUF                        |               14 |             34 |         2.43 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/write_pc                        | reset2_IBUF                        |               12 |             37 |         3.08 |
+|  clk_IBUF_BUFG | mem/saved_data_addr[9]_i_1_n_0                |                                    |               16 |             45 |         2.81 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[9]             |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_4           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_10          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_11          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_12          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_13          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_17          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_18          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_2           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_3           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_5           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_6           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_7           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_8           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[10]            |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[11]            |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[11]_0          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_15          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_16          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_9           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_1           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_0           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]             |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]             |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_0           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_1           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_3           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_4           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_5           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_2           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_funct3_reg[0]_6           |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_ALUOut_reg[1]_14          |                                    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/bubble_ifid_delayed_reg_0[0]    | reset2_IBUF                        |               20 |             66 |         3.30 |
+|  clk_IBUF_BUFG |                                               | reset2_IBUF                        |               41 |            117 |         2.85 |
+|  clk_IBUF_BUFG | mem/memReady                                  | reset2_IBUF                        |               47 |            120 |         2.55 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/EXMEM_csr_addr                  | reset2_IBUF                        |               56 |            156 |         2.79 |
+|  clk_IBUF_BUFG | cpu_1/csrFile/ready_reg_31[0]                 | reset2_IBUF                        |               76 |            166 |         2.18 |
++----------------+-----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+
+

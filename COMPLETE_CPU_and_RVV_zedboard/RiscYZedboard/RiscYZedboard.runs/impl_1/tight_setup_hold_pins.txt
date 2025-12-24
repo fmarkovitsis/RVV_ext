@@ -1,0 +1,26 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                      clk |                      clk |                                                                                    mem/data_out_reg[28]/D|
+|                      clk |                      clk |                                                                                        mem/state_reg[0]/D|
+|                      clk |                      clk |                                                                                    mem/data_out_reg[29]/D|
+|                      clk |                      clk |                                                                                     mem/data_out_reg[6]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[10]/D|
+|                      clk |                      clk |                                                                              cpu_1/MEMWB_DMemOut_reg[4]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[11]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[12]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[18]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[20]/D|
+|                      clk |                      clk |                                                                                 clint_inst/rdata_reg[9]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[13]/D|
+|                      clk |                      clk |                                                                                 clint_inst/rdata_reg[2]/D|
+|                      clk |                      clk |                                                                                 clint_inst/rdata_reg[3]/D|
+|                      clk |                      clk |                                                                             cpu_1/MEMWB_DMemOut_reg[24]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[15]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[16]/D|
+|                      clk |                      clk |                                                                                 clint_inst/rdata_reg[6]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[19]/D|
+|                      clk |                      clk |                                                                                 clint_inst/rdata_reg[0]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[27]/D|
+|                      clk |                      clk |                                                                                clint_inst/rdata_reg[26]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

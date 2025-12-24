@@ -1,0 +1,21 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 1c628de8013c4067876c1d7149883960 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 32 for port 'idex_csr_addr' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:698]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 32 for port 'exmem_csr_addr' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:699]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 32 for port 'memwb_csr_addr' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:700]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'counter27M' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:95]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 14 for port 'xcursor' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:273]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 14 for port 'ycursor' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:274]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_a' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:75]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_b' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:80]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_a' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:92]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_b' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:97]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 12 for port 'addr_a' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:154]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 12 for port 'addr_b' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:159]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 9 for port 'vaddr' [/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:292]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

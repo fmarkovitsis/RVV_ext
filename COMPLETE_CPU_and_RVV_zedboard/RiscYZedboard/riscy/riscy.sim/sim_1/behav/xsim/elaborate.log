@@ -1,0 +1,107 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto fb98eeaebefd41ceb6c65b6cf4b6ca27 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 32 for port 'idex_csr_addr' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:1027]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 32 for port 'exmem_csr_addr' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:1028]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 32 for port 'memwb_csr_addr' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:1029]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'counter27M' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:95]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 14 for port 'xcursor' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:273]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 14 for port 'ycursor' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:274]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_a' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:75]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_b' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:80]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_a' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:92]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 11 for port 'addr_b' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:97]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 12 for port 'addr_a' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:154]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 12 for port 'addr_b' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:159]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 9 for port 'vaddr' [C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:292]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v" Line 15. Module cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v" Line 10. Module signExtend doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v" Line 13. Module RegFile doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v" Line 10. Module SignExtendSelector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v" Line 11. Module CSRFile doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v" Line 11. Module control_main doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_vunit.v" Line 9. Module vcontrol_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v" Line 11. Module control_stall_id doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v" Line 9. Module ALUCPU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64.v" Line 9. Module sign_ext_64 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64_selector.v" Line 9. Module sign_ext_64_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v" Line 10. Module control_alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v" Line 16. Module control_bypass_ex doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v" Line 10. Module mem_write_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v" Line 10. Module control_branch doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v" Line 10. Module mem_read_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v" Line 6. Module bus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v" Line 1. Module clint doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v" Line 10. Module memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v" Line 1. Module PPU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" Line 1. Module DPBRAM(ADDR_WIDTH=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" Line 1. Module DPBRAM(ADDR_WIDTH=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" Line 1. Module DPBRAM(ADDR_WIDTH=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v" Line 1. Module horizontal doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v" Line 15. Module cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v" Line 10. Module signExtend doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v" Line 13. Module RegFile doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v" Line 10. Module SignExtendSelector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v" Line 11. Module CSRFile doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v" Line 11. Module control_main doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_vunit.v" Line 9. Module vcontrol_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v" Line 11. Module control_stall_id doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v" Line 9. Module ALUCPU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64.v" Line 9. Module sign_ext_64 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/sign_ext_64_selector.v" Line 9. Module sign_ext_64_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v" Line 10. Module control_alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v" Line 16. Module control_bypass_ex doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v" Line 10. Module mem_write_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v" Line 10. Module control_branch doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v" Line 10. Module mem_read_selector doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v" Line 6. Module bus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v" Line 1. Module clint doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v" Line 10. Module memory doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v" Line 1. Module PPU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" Line 1. Module DPBRAM(ADDR_WIDTH=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" Line 1. Module DPBRAM(ADDR_WIDTH=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v" Line 1. Module DPBRAM(ADDR_WIDTH=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v" Line 1. Module horizontal doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.signExtend
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.vRegFile
+Compiling module xil_defaultlib.vsetvl
+Compiling module xil_defaultlib.vl_setup
+Compiling module xil_defaultlib.SignExtendSelector
+Compiling module xil_defaultlib.CSRFile
+Compiling module xil_defaultlib.control_main
+Compiling module xil_defaultlib.vcontrol_unit
+Compiling module xil_defaultlib.grouping_selector
+Compiling module xil_defaultlib.control_stall_id
+Compiling module xil_defaultlib.ALUCPU
+Compiling module xil_defaultlib.sign_ext_64
+Compiling module xil_defaultlib.sign_ext_64_selector
+Compiling module xil_defaultlib.vALU
+Compiling module xil_defaultlib.vl_masking
+Compiling module xil_defaultlib.control_alu
+Compiling module xil_defaultlib.vcontrol_bypass
+Compiling module xil_defaultlib.control_bypass_ex
+Compiling module xil_defaultlib.mem_write_selector
+Compiling module xil_defaultlib.vs_selector
+Compiling module xil_defaultlib.control_branch
+Compiling module xil_defaultlib.mem_read_selector
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.bus
+Compiling module xil_defaultlib.clint
+Compiling module xil_defaultlib.memory
+Compiling module xil_defaultlib.DPBRAM(ADDR_WIDTH=11)
+Compiling module xil_defaultlib.DPBRAM(ADDR_WIDTH=12)
+Compiling module xil_defaultlib.PPU
+Compiling module xil_defaultlib.horizontal
+Compiling module xil_defaultlib.vertical
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav

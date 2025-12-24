@@ -1,0 +1,472 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 433
+WARNING: [Synth 8-6901] identifier 'i' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:249]
+WARNING: [Synth 8-6901] identifier 'i' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:249]
+WARNING: [Synth 8-6901] identifier 'i' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:249]
+WARNING: [Synth 8-6901] identifier 'i' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:249]
+WARNING: [Synth 8-6901] identifier 'i' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:251]
+WARNING: [Synth 8-2292] literal value truncated to fit in 1 bits [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v:113]
+WARNING: [Synth 8-6901] identifier 'flushPipeline' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:241]
+WARNING: [Synth 8-6901] identifier 'flushPipeline' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:458]
+WARNING: [Synth 8-6901] identifier 'flushPipeline' is used before its declaration [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:489]
+WARNING: [Synth 8-992] memReady is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:72]
+WARNING: [Synth 8-992] clint_ren is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:120]
+WARNING: [Synth 8-992] clint_wen is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:121]
+WARNING: [Synth 8-992] clint_data_out is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:122]
+WARNING: [Synth 8-992] msw_irq is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:123]
+WARNING: [Synth 8-992] mtimer_irq is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:124]
+WARNING: [Synth 8-992] mext_irq is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:125]
+WARNING: [Synth 8-992] btn_ren is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:150]
+WARNING: [Synth 8-992] btn_out is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:151]
+WARNING: [Synth 8-992] flash_ren is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:162]
+WARNING: [Synth 8-992] flash_wen is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:163]
+WARNING: [Synth 8-992] flash_data_out is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:164]
+WARNING: [Synth 8-992] counter1M is already implicitly declared earlier [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:388]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2407.352 ; gain = 0.000 ; free physical = 24362 ; free virtual = 35855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:10]
+	Parameter STATE_INIT bound to: 0 - type: integer 
+	Parameter STATE_WAITING_BUTTON bound to: 1 - type: integer 
+	Parameter STATE_DEBOUNCE bound to: 2 - type: integer 
+	Parameter STATE_START bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cpu' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:15]
+	Parameter MEPC_IDLE bound to: 0 - type: integer 
+	Parameter MEPC_WAITINGJUMP bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'signExtend' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'signExtend' (1#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/signExtend.v:10]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (2#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/RegFile.v:13]
+INFO: [Synth 8-6157] synthesizing module 'SignExtendSelector' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtendSelector' (3#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/SignExtendSelector.v:10]
+INFO: [Synth 8-6157] synthesizing module 'CSRFile' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v:11]
+	Parameter FLUSH_COUNT bound to: 4'b1101 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v:96]
+WARNING: [Synth 8-151] case item 12'b001100000001 is unreachable [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'CSRFile' (4#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/CSRFile.v:11]
+INFO: [Synth 8-6157] synthesizing module 'control_main' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'control_main' (5#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_main.v:11]
+INFO: [Synth 8-6157] synthesizing module 'control_stall_id' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'control_stall_id' (6#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_stall_id.v:11]
+WARNING: [Synth 8-7071] port 'bubble_memwb' of module 'control_stall_id' is unconnected for instance 'control_stall_id' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:543]
+WARNING: [Synth 8-7023] instance 'control_stall_id' of module 'control_stall_id' has 25 connections declared, but only 24 given [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:543]
+INFO: [Synth 8-6157] synthesizing module 'ALUCPU' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v:9]
+	Parameter N bound to: 32 - type: integer 
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'ALUCPU' (7#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/ALUCPU.v:9]
+INFO: [Synth 8-6157] synthesizing module 'control_alu' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v:10]
+INFO: [Synth 8-226] default block is never used [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v:22]
+INFO: [Synth 8-226] default block is never used [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v:24]
+INFO: [Synth 8-226] default block is never used [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'control_alu' (8#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_alu.v:10]
+INFO: [Synth 8-6157] synthesizing module 'control_bypass_ex' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'control_bypass_ex' (9#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_bypass_ex.v:16]
+INFO: [Synth 8-6157] synthesizing module 'mem_write_selector' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'mem_write_selector' (10#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_write_selector.v:10]
+INFO: [Synth 8-6157] synthesizing module 'control_branch' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'control_branch' (11#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/control_branch.v:10]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_selector' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_selector' (12#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/mem_read_selector.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (13#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU/cpu.v:15]
+INFO: [Synth 8-6157] synthesizing module 'bus' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bus' (14#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Buses/bus.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clint' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v:1]
+	Parameter MSIP_ADDR bound to: 33554432 - type: integer 
+	Parameter MTIME_ADDR bound to: 33603576 - type: integer 
+	Parameter MTIMECMP_ADDR bound to: 33570816 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'clint' (15#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/InteruptControllers/CLINT.v:1]
+INFO: [Synth 8-6157] synthesizing module 'memory' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v:10]
+	Parameter data_size bound to: 1024 - type: integer 
+	Parameter STATE_IDLE bound to: 2'b00 
+	Parameter STATE_READING bound to: 2'b01 
+	Parameter STATE_WRITING bound to: 2'b10 
+	Parameter STATE_FINISHED bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'memory' (16#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/memory.v:10]
+INFO: [Synth 8-6157] synthesizing module 'PPU' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:1]
+	Parameter MAX_WIDTH bound to: 15'b000001010000000 
+	Parameter MAX_OBJ bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'DPBRAM' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DPBRAM' (17#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v:1]
+WARNING: [Synth 8-689] width (15) of port connection 'addr_a' does not match port width (11) of module 'DPBRAM' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:75]
+WARNING: [Synth 8-689] width (15) of port connection 'addr_b' does not match port width (11) of module 'DPBRAM' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:80]
+WARNING: [Synth 8-689] width (15) of port connection 'addr_a' does not match port width (11) of module 'DPBRAM' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:92]
+WARNING: [Synth 8-689] width (15) of port connection 'addr_b' does not match port width (11) of module 'DPBRAM' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:97]
+INFO: [Synth 8-6157] synthesizing module 'DPBRAM__parameterized0' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DPBRAM__parameterized0' (17#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/Memories/DPBRAM.v:1]
+WARNING: [Synth 8-689] width (16) of port connection 'addr_a' does not match port width (12) of module 'DPBRAM__parameterized0' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:154]
+WARNING: [Synth 8-689] width (15) of port connection 'addr_b' does not match port width (12) of module 'DPBRAM__parameterized0' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:159]
+WARNING: [Synth 8-567] referenced signal 'dataOutTxt' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'dataOutSprite' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'spriteCursor_x' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'charMem' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'yPos' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'xPos' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'dataOutAttr' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+WARNING: [Synth 8-567] referenced signal 'hblank' should be on the sensitivity list [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:342]
+INFO: [Synth 8-6155] done synthesizing module 'PPU' (18#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/GPIO/PPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'horizontal' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'horizontal' (19#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/hsync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vertical' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/vsync.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vertical' (20#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/vga_zedboard-master/vsync.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'vaddr' does not match port width (9) of module 'vertical' [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:292]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:413]
+INFO: [Synth 8-6155] done synthesizing module 'top' (21#1) [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/sources_1/imports/src/soc.v:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2407.352 ; gain = 0.000 ; free physical = 25026 ; free virtual = 36523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2407.352 ; gain = 0.000 ; free physical = 25029 ; free virtual = 36526
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2407.352 ; gain = 0.000 ; free physical = 25029 ; free virtual = 36526
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2407.352 ; gain = 0.000 ; free physical = 25028 ; free virtual = 36525
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/constrs_1/imports/vga_zedboard-master/project_1.xdc]
+Finished Parsing XDC File [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/constrs_1/imports/vga_zedboard-master/project_1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/inf2021/kvarakliotis/Desktop/RiscyVivadoWorking/RiscyVivadoWorking.srcs/constrs_1/imports/vga_zedboard-master/project_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.922 ; gain = 0.000 ; free physical = 24816 ; free virtual = 36326
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2482.922 ; gain = 0.000 ; free physical = 24816 ; free virtual = 36326
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2482.922 ; gain = 75.570 ; free physical = 24938 ; free virtual = 36448
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2482.922 ; gain = 75.570 ; free physical = 24937 ; free virtual = 36448
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2482.922 ; gain = 75.570 ; free physical = 24937 ; free virtual = 36448
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'memory'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                                0 |                               00
+           STATE_READING |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'memory'
+INFO: [Synth 8-3971] The signal "DPBRAM:/mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "DPBRAM__parameterized0:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:40 ; elapsed = 00:04:44 . Memory (MB): peak = 2482.922 ; gain = 75.570 ; free physical = 24594 ; free virtual = 36150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 2     
+	   3 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 3     
+	   3 Input    9 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 64    
+	               20 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 37    
++---RAMs : 
+	              32K Bit	(4096 X 8 bit)          RAMs := 1     
+	              32K Bit	(1024 X 32 bit)          RAMs := 1     
+	              16K Bit	(2048 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   5 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 86    
+	   7 Input   32 Bit        Muxes := 1     
+	   9 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 4     
+	   3 Input   32 Bit        Muxes := 2     
+	   6 Input   32 Bit        Muxes := 1     
+	   8 Input   32 Bit        Muxes := 2     
+	   2 Input   25 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 4     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 7     
+	   2 Input    8 Bit        Muxes := 22    
+	   4 Input    8 Bit        Muxes := 2     
+	  15 Input    8 Bit        Muxes := 2     
+	   7 Input    8 Bit        Muxes := 2     
+	  16 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 10    
+	   2 Input    4 Bit        Muxes := 4     
+	   8 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 10    
+	  11 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 138   
+	   4 Input    1 Bit        Muxes := 2     
+	   9 Input    1 Bit        Muxes := 6     
+	  11 Input    1 Bit        Muxes := 9     
+	  16 Input    1 Bit        Muxes := 1     
+	  14 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 10    
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:53 ; elapsed = 00:07:02 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24619 ; free virtual = 36225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | attributes_Buffer/mem_reg | 2 K x 8(READ_FIRST)    | W |   | 2 K x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|top         | sprite_BRAM/mem_reg       | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|top         | text_Buffer/mem_reg       | 2 K x 8(READ_FIRST)    | W |   | 2 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+------------------+-----------+----------------------+------------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives       | 
++------------+------------------+-----------+----------------------+------------------+
+|top         | mem/data_mem_reg | Implied   | 1 K x 32             | RAM128X1D x 512	 | 
++------------+------------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:59 ; elapsed = 00:07:08 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24522 ; free virtual = 36135
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:07:15 ; elapsed = 00:07:24 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24417 ; free virtual = 36031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | attributes_Buffer/mem_reg | 2 K x 8(READ_FIRST)    | W |   | 2 K x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|top         | sprite_BRAM/mem_reg       | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|top         | text_Buffer/mem_reg       | 2 K x 8(READ_FIRST)    | W |   | 2 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+---------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+------------------+-----------+----------------------+------------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives       | 
++------------+------------------+-----------+----------------------+------------------+
+|top         | mem/data_mem_reg | Implied   | 1 K x 32             | RAM128X1D x 512	 | 
++------------+------------------+-----------+----------------------+------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ppu_inst/attributes_Buffer/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ppu_inst/sprite_BRAM/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ppu_inst/text_Buffer/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:07:20 ; elapsed = 00:07:30 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24488 ; free virtual = 36102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:24 ; elapsed = 00:07:33 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24487 ; free virtual = 36101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:24 ; elapsed = 00:07:33 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24487 ; free virtual = 36101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:24 ; elapsed = 00:07:34 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24479 ; free virtual = 36093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:24 ; elapsed = 00:07:34 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24479 ; free virtual = 36093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:25 ; elapsed = 00:07:34 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24479 ; free virtual = 36093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:25 ; elapsed = 00:07:34 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24479 ; free virtual = 36093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |   107|
+|3     |LUT1      |    11|
+|4     |LUT2      |   468|
+|5     |LUT3      |   229|
+|6     |LUT4      |   390|
+|7     |LUT5      |   612|
+|8     |LUT6      |  1986|
+|9     |MUXF7     |   437|
+|10    |MUXF8     |   167|
+|11    |RAM128X1D |   512|
+|12    |RAMB18E1  |     2|
+|13    |RAMB36E1  |     1|
+|14    |FDCE      |  2036|
+|15    |FDPE      |    71|
+|16    |FDRE      |   260|
+|17    |IBUF      |     2|
+|18    |OBUF      |    14|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:25 ; elapsed = 00:07:34 . Memory (MB): peak = 2600.406 ; gain = 193.055 ; free physical = 24479 ; free virtual = 36093
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:21 ; elapsed = 00:07:31 . Memory (MB): peak = 2600.406 ; gain = 117.484 ; free physical = 24524 ; free virtual = 36138
+Synthesis Optimization Complete : Time (s): cpu = 00:07:25 ; elapsed = 00:07:34 . Memory (MB): peak = 2600.414 ; gain = 193.055 ; free physical = 24524 ; free virtual = 36138
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2600.414 ; gain = 0.000 ; free physical = 24624 ; free virtual = 36238
+INFO: [Netlist 29-17] Analyzing 1226 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2600.414 ; gain = 0.000 ; free physical = 24585 ; free virtual = 36199
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 512 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 512 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:07:37 ; elapsed = 00:07:42 . Memory (MB): peak = 2600.414 ; gain = 201.434 ; free physical = 24639 ; free virtual = 36253
+INFO: [Common 17-1381] The checkpoint '/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 16 12:12:53 2025...

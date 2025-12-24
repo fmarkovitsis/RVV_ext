@@ -1,0 +1,48 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 1c628de8013c4067876c1d7149883960 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot test_func_synth xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT6
+Compiling module xil_defaultlib.horizontal
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.vertical
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.clint
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.CSRFile
+Compiling module xil_defaultlib.cpu
+Compiling module unisims_ver.RAM128X1D
+Compiling module xil_defaultlib.memory
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB18E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.DPBRAM
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(READ_WIDTH_A=9,READ_WID...
+Compiling module xil_defaultlib.DPBRAM__parameterized0
+Compiling module xil_defaultlib.DPBRAM_0
+Compiling module xil_defaultlib.PPU
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_func_synth

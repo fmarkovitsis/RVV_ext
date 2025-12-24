@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="874.719 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,025.057 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/led" type="array">
+      <obj_property name="ElementShortName">led[5:0]</obj_property>
+      <obj_property name="ObjectShortName">led[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/btn1" type="logic">
+      <obj_property name="ElementShortName">btn1</obj_property>
+      <obj_property name="ObjectShortName">btn1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/btn2" type="logic">
+      <obj_property name="ElementShortName">btn2</obj_property>
+      <obj_property name="ObjectShortName">btn2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_sda" type="logic">
+      <obj_property name="ElementShortName">io_sda</obj_property>
+      <obj_property name="ObjectShortName">io_sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_scl" type="logic">
+      <obj_property name="ElementShortName">io_scl</obj_property>
+      <obj_property name="ObjectShortName">io_scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/hsync" type="logic">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/vsync" type="logic">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/red" type="array">
+      <obj_property name="ElementShortName">red[3:0]</obj_property>
+      <obj_property name="ObjectShortName">red[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/green" type="array">
+      <obj_property name="ElementShortName">green[3:0]</obj_property>
+      <obj_property name="ObjectShortName">green[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/blue" type="array">
+      <obj_property name="ElementShortName">blue[3:0]</obj_property>
+      <obj_property name="ObjectShortName">blue[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/TOP/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/TOP/instr" type="array">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/TOP/ppu_inst/fontMem" type="array">
+      <obj_property name="ElementShortName">fontMem[0:16383]</obj_property>
+      <obj_property name="ObjectShortName">fontMem[0:16383]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/TOP/ppu_inst/text_Buffer/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:2047][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:2047][7:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

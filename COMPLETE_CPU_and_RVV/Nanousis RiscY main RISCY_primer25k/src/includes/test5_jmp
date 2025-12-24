@@ -1,0 +1,26 @@
+_start:
+    li s4, 0         
+    li s5, 10              
+
+loop:
+    beq s4, s5, end   
+    addi s4, s4, 1   
+    vadd.vx vs1, vs0, s4
+    vadd.vv vs1, vs1, vs1 
+    j loop            
+
+end:
+    addi s5, s5, 10
+    j loop
+
+
+vsetvli 11111, 00001, 0001011000 //SEW=64, LMUL=1, AVL=1
+addi s4, zero, 0
+addi s5, zero, 10
+beq s4, s5, 20
+addi s4, s4, 1
+vadd.vx vs1, vs1, s4         
+vadd.vv vs1, vs1, vs1        
+jal zero, -16
+addi s5, s5, 10
+jal zero, -24

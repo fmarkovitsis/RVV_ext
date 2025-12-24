@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.sim/sim_1/synth/func/xsim/test_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSRFile
+INFO: [VRFC 10-311] analyzing module DPBRAM
+INFO: [VRFC 10-311] analyzing module DPBRAM_0
+INFO: [VRFC 10-311] analyzing module DPBRAM__parameterized0
+INFO: [VRFC 10-311] analyzing module PPU
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-311] analyzing module clint
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-311] analyzing module horizontal
+INFO: [VRFC 10-311] analyzing module memory
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module vertical
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/inf2021/kvarakliotis/Desktop/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test

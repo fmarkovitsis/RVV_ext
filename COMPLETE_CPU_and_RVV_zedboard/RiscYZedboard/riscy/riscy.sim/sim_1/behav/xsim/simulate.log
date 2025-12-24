@@ -1,0 +1,4 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Starting TESTBENCH
+$finish called at time : 251300 ns : File "C:/Users/zacha/OneDrive/Desktop/Uth/Parallel Architecture/RiscYZedboard/RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sim_1/imports/Testbench/soctb.v" Line 77
