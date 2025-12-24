@@ -9,8 +9,6 @@
 
 **Hardware Implementation of RISC-V Vector Extensions (RVV)**
 
-*Optimized for Parallel Processing and SoC Integration*
-
 </div>
 
 ---
