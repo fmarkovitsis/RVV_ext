@@ -191,4 +191,173 @@ To fully utilize the design on the Zedboard, the following connections are stand
 git clone https://github.com/fmarkovitsis/RVV_ext.git
 cd RVV_ext
 ```
+
+#### 2️⃣ **Extract and Open Vivado Project**
+```bash
+unzip RiscYZedboard.zip
+```
+- Open **Vivado Design Suite**
+- Navigate to `File > Project > Open`
+- Select the `.xpr` project file from the extracted directory
+
+#### 3️⃣ **Synthesize and Implement Design**
+- In Vivado, click **Run Synthesis**
+- After completion, click **Run Implementation**
+- Finally, click **Generate Bitstream**
+
+#### 4️⃣ **Program the FPGA**
+- Connect your Zedboard via JTAG
+- Open **Hardware Manager** in Vivado
+- Select **Program Device** and load the generated `.bit` file
+
+#### 5️⃣ **Boot Linux (Optional)**
+```bash
+unzip Final_linux.zip
+```
+- Copy the extracted files to a FAT32-formatted SD card
+- Insert the SD card into the Zedboard
+- Power on the board and connect via UART (115200 baud)
+
 </details>
+
+---
+
+## 📊 Key Features
+
+### ✨ Vector Processing Capabilities
+
+<div align="center">
+
+| Feature | Description |
+|---------|-------------|
+| **🔢 Vector Register File** | 32 vector registers with configurable element width (8/16/32/64-bit) |
+| **➕ Arithmetic Operations** | Add, subtract, multiply, divide, and fused multiply-add for integers and floats |
+| **🔀 Permutation & Shuffle** | Flexible data reorganization within vector registers |
+| **💾 Memory Operations** | Unit-stride, strided, and indexed load/store patterns |
+| **🎭 Masking Support** | Predicated execution for conditional vector operations |
+| **⚡ Configurable VLEN** | Adjustable vector length for performance/area trade-offs |
+
+</div>
+
+### 🎯 RVV Compliance
+
+This implementation targets **RISC-V Vector Extension v1.0** specification compliance, supporting:
+
+- **Vector-Vector Operations**: Element-wise operations between vector registers
+- **Vector-Scalar Operations**: Broadcasting scalar values across vector elements
+- **Vector Load/Store**: Efficient memory access patterns
+- **Vector Reductions**: Sum, min, max operations across vector elements
+- **Widening/Narrowing**: Operations that change element width
+
+---
+
+## 👥 Contributors
+
+<div align="center">
+
+### 🌟 Project Team
+
+</div>
+
+This project was developed as part of advanced computer architecture research. Contributions, bug reports, and feature requests are welcome!
+
+### 🤝 How to Contribute
+
+1. **Fork** the repository
+2. Create a **feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. Open a **Pull Request**
+
+### 📧 Contact
+
+For questions, collaboration, or support:
+- **GitHub Issues**: [Report bugs or request features](https://github.com/fmarkovitsis/RVV_ext/issues)
+- **Project Maintainer**: [@fmarkovitsis](https://github.com/fmarkovitsis)
+
+---
+
+## 📄 Documentation
+
+### 📚 Additional Resources
+
+<table>
+<tr>
+<td width="50%">
+
+**🔍 Technical References**
+- [RISC-V Vector Extension Spec v1.0](https://github.com/riscv/riscv-v-spec)
+- [Xilinx Zynq-7000 Technical Reference](https://www.xilinx.com/support/documentation/user_guides/ug585-Zynq-7000-TRM.pdf)
+- [Vivado Design Suite User Guide](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_1/ug893-vivado-ide.pdf)
+
+</td>
+<td width="50%">
+
+**📖 Learning Materials**
+- [RISC-V ISA Manual](https://riscv.org/technical/specifications/)
+- [Vector Processing Fundamentals](https://en.wikipedia.org/wiki/Vector_processor)
+- [FPGA Design Best Practices](https://www.intel.com/content/www/us/en/docs/programmable/683082/current/design-recommendations.html)
+
+</td>
+</tr>
+</table>
+
+### 🗂️ Repository Contents
+
+```
+RVV_ext/
+├── src/                    # RTL source files (Verilog/SystemVerilog)
+├── testbenches/           # Simulation testbenches
+├── Testbench/             # Additional verification files
+├── RiscYZedboard.zip      # Complete Vivado project archive
+├── Final_linux.zip        # Linux bootable image for Zedboard
+├── DATED_files/           # Historical design versions
+└── README.md              # This file
+```
+
+---
+
+## 📜 License
+
+This project is open-source and available for academic and research purposes. Please refer to the repository for specific licensing terms.
+
+---
+
+## 🙏 Acknowledgments
+
+- **RISC-V Foundation** for the open ISA specification
+- **Xilinx** for FPGA tools and development boards
+- The **open-source hardware community** for inspiration and support
+
+---
+
+## 📊 Project Status
+
+<div align="center">
+
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.0-blue?style=for-the-badge)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange?style=for-the-badge)
+
+</div>
+
+### 🚧 Roadmap
+
+- [x] Core vector arithmetic units
+- [x] Vector register file implementation
+- [x] Memory interface and load/store units
+- [x] Basic RVV instruction support
+- [ ] Full RVV 1.0 specification compliance
+- [ ] Performance optimizations
+- [ ] Extended precision floating-point
+- [ ] Advanced vector permutation operations
+
+---
+
+<div align="center">
+
+**⭐ If you find this project useful, please consider giving it a star! ⭐**
+
+Made with ❤️ by the RVV_ext team
+
+</div>
