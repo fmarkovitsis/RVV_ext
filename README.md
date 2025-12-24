@@ -38,7 +38,6 @@ This project implements a dedicated Vector Processing Unit (VPU) compliant with 
 - **HDL:** Verilog & SystemVerilog
 - **Synthesis:** Xilinx Vivado Design Suite
 - **Target:** Zynq-7000 SoC (Zedboard)
-- **Kernel:** Custom Linux Build
 
 </td>
 <td width="50%">
