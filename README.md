@@ -109,3 +109,84 @@ Contains simulation scripts and test vectors to verify individual modules and th
 The design follows a decoupled architecture where the scalar core handles control flow while offloading vector instructions to the VPU.
 
 ```mermaid
+
+## 💻 Hardware Requirements
+
+<div align="center">
+
+### 🎛️ Primary Development Board
+
+<table>
+<tr>
+<td align="center" width="30%">
+<img src="https://img.shields.io/badge/Avnet-Zedboard-blue?style=for-the-badge" alt="Zedboard"/>
+</td>
+<td width="70%">
+
+**Avnet / Digilent Zedboard**
+- **SoC**: Xilinx Zynq-7000 (XC7Z020-CLG484-1)
+- **Architecture**: Dual-core ARM Cortex-A9 + Artix-7 Class FPGA
+- **Memory**: 512 MB DDR3
+- **Storage**: 256 Mb Quad-SPI Flash, 4 GB SD Card
+- **Interface**: 10/100/1000 Ethernet, USB OTG, USB-UART
+- **Display**: HDMI Output, VGA Output, OLED Display
+
+</td>
+</tr>
+</table>
+
+</div>
+
+### 🔌 Connectivity & I/O
+To fully utilize the design on the Zedboard, the following connections are standard:
+
+| Interface | Usage |
+|----------|-------|
+| **USB-UART** | Serial console for Linux/Bare-metal terminal access (115200 baud). |
+| **JTAG** | For programming the bitstream via Vivado Hardware Manager. |
+| **SD Card** | Used to boot the Linux image (`Final_linux.zip`). |
+
+---
+
+## 📦 Software Requirements
+
+<div align="center">
+
+### 🛠️ Development Environment
+
+</div>
+
+| Tool | Version | Purpose |
+|------|---------|---------|
+| **Xilinx Vivado Design Suite** | 2018.x or newer | Synthesis, Implementation, and Bitstream Generation |
+| **Xilinx SDK / Vitis** | Matching Vivado | Software driver development and C/C++ application compilation |
+| **ModelSim / Questa** | Optional | Advanced behavioral simulation |
+
+### 🐧 Operating System Support
+
+<div align="center">
+
+![Windows](https://img.shields.io/badge/Windows-10%2F11-blue?style=flat-square&logo=windows)
+![Linux](https://img.shields.io/badge/Linux-Ubuntu%2018.04+-orange?style=flat-square&logo=linux)
+
+</div>
+
+---
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+
+- [ ] **Xilinx Vivado** installed and licensed.
+- [ ] **Digilent Zedboard** connected via USB-JTAG and UART.
+- [ ] **SD Card** formatted (FAT32) for booting Linux.
+
+### 🏁 Quick Start Guide
+
+<details>
+<summary><b>🔧 Click for setup instructions</b></summary>
+
+#### 1️⃣ **Clone the Repository**
+```bash
+git clone [https://github.com/fmarkovitsis/RVV_ext.git](https://github.com/fmarkovitsis/RVV_ext.git)
+cd RVV_ext
