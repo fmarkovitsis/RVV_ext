@@ -108,7 +108,7 @@ Contains simulation scripts and test vectors to verify individual modules and th
 
 The design follows a decoupled architecture where the scalar core handles control flow while offloading vector instructions to the VPU.
 
-===
+---
 
 ## 💻 Hardware Requirements
 
@@ -188,5 +188,7 @@ To fully utilize the design on the Zedboard, the following connections are stand
 
 #### 1️⃣ **Clone the Repository**
 ```bash
-git clone [https://github.com/fmarkovitsis/RVV_ext.git](https://github.com/fmarkovitsis/RVV_ext.git)
+git clone https://github.com/fmarkovitsis/RVV_ext.git
 cd RVV_ext
+```
+</details>
