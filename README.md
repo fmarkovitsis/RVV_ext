@@ -194,7 +194,6 @@ cd RVV_ext
 |---------|-------------|
 | **🔢 Vector Register File** | 32 vector registers with configurable element width (8/16/32/64-bit) |
 | **➕ Arithmetic Operations** | Add, subtract, multiply, divide, and fused multiply-add for integers and floats |
-| **🔀 Permutation & Shuffle** | Flexible data reorganization within vector registers |
 | **💾 Memory Operations** | Unit-stride, strided, and indexed load/store patterns |
 | **🎭 Masking Support** | Predicated execution for conditional vector operations |
 | **⚡ Configurable VLEN** | Adjustable vector length for performance/area trade-offs |
