@@ -28,7 +28,7 @@
 
 ## 🎯 Project Overview
 
-This project implements a dedicated Vector Processing Unit (VPU) compliant with the RISC-V Vector Extension (RVV) specification. Designed to interface with a standard scalar RISC-V core, this extension unlocks data-level parallelism for tasks such as matrix operations, signal processing, and machine learning.
+This project implements a dedicated Vector Processing Unit (VPU) compliant with the RISC-V Vector Extension (RVV) specification. Having as a basis a working implementation of RISC-V, operating on the Zedboard FPGA, the RVV extension was also added to the circuit to enable parallel computing with multiple data. These operations can be used for matrix operations, signal processing and artificial intelligence.
 
 <table>
 <tr>
