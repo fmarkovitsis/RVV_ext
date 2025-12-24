@@ -75,7 +75,9 @@ This directory contains the Verilog/SystemVerilog source code defining the hardw
 | **vcontrol_bypass.v** | Bypass unit for resolving data dependencies within different stages of the pipeline without stalls. |
 | **vgrouping_selector.v** | Controlls how many registers are grouped in order to exoress larger dimension vectors. |
 | **vl_masking.v** | Masks off bit vector elements that are not needed, depending on the decided bit vector legth. |
-| **valu.v** | Calculates vector length (vl) based on SEW, vector resitster grouping and AVL, while also updating the value of AVL. |
+| **vl_setup.v** | Calculates vector length (vl) based on SEW, vector resitster grouping and AVL, while also updating the value of AVL. |
+| **vsetvl.v** | Decodes instructions that set vector unit parameters (SEW, AVL etc.). |
+| **cpu_phil.v** | The final version of the CPU, including the functional version of the RVV. |
 </details>
 
 ### 🧪 Verification & Simulation
