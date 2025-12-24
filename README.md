@@ -62,7 +62,7 @@ This project implements a dedicated Vector Processing Unit (VPU) compliant with 
 <details>
 <summary><b>🔍 Click to expand Source details</b></summary>
 
-**📂 Location**: `src/`
+**📂 Location**: `COMPLETE_CPU_and_RVV/Nanousis RiscY main RISCY_primer25k/src/CPU`
 
 This directory contains the Verilog/SystemVerilog source code defining the hardware logic.
 
@@ -86,12 +86,9 @@ This directory contains the Verilog/SystemVerilog source code defining the hardw
 <details>
 <summary><b>🔍 Click to expand Testbench details</b></summary>
 
-**📂 Location**: `testbenches/` & `Testbench/`
+**📂 Location**: `DATED_files/testbenches/`
 
-Contains simulation scripts and test vectors to verify individual modules and the full system integration.
-
-- **Unit Tests:** Validate specific arithmetic blocks (e.g., vector adders, multipliers).
-- **Integration Tests:** Verify the interaction between the scalar core and the vector extension.
+Contains simulation scripts and test vectors to verify individual modules.
 
 </details>
 
