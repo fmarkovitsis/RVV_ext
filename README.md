@@ -28,7 +28,7 @@
 
 ## 🎯 Project Overview
 
-**RVV_ext** represents a significant step in open-source hardware acceleration. This project implements a dedicated Vector Processing Unit (VPU) compliant with the RISC-V Vector Extension (RVV) specification. Designed to interface with a standard scalar RISC-V core, this extension unlocks massive data-level parallelism for tasks such as matrix operations, signal processing, and machine learning.
+This project implements a dedicated Vector Processing Unit (VPU) compliant with the RISC-V Vector Extension (RVV) specification. Designed to interface with a standard scalar RISC-V core, this extension unlocks data-level parallelism for tasks such as matrix operations, signal processing, and machine learning.
 
 <table>
 <tr>
