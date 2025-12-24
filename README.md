@@ -356,6 +356,4 @@ This project is open-source and available for academic and research purposes. Pl
 
 **⭐ If you find this project useful, please consider giving it a star! ⭐**
 
-Made with ❤️ by the RVV_ext team
-
 </div>
