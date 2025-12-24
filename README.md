@@ -141,8 +141,6 @@ To fully utilize the design on the Zedboard, the following connections are stand
 |----------|-------|
 | **USB-UART** | Serial console for Linux/Bare-metal terminal access (115200 baud). |
 | **JTAG** | For programming the bitstream via Vivado Hardware Manager. |
-| **SD Card** | Used to boot the Linux image (`Final_linux.zip`). |
-
 ---
 
 ## 📦 Software Requirements
@@ -156,17 +154,7 @@ To fully utilize the design on the Zedboard, the following connections are stand
 | Tool | Version | Purpose |
 |------|---------|---------|
 | **Xilinx Vivado Design Suite** | 2018.x or newer | Synthesis, Implementation, and Bitstream Generation |
-| **Xilinx SDK / Vitis** | Matching Vivado | Software driver development and C/C++ application compilation |
-| **ModelSim / Questa** | Optional | Advanced behavioral simulation |
-
-### 🐧 Operating System Support
-
-<div align="center">
-
-![Windows](https://img.shields.io/badge/Windows-10%2F11-blue?style=flat-square&logo=windows)
-![Linux](https://img.shields.io/badge/Linux-Ubuntu%2018.04+-orange?style=flat-square&logo=linux)
-
-</div>
+| **GTK Wave & Icarus Verilog** | Newest Versions | For checking the waveforms during debugging |
 
 ---
 
@@ -176,12 +164,8 @@ To fully utilize the design on the Zedboard, the following connections are stand
 
 - [ ] **Xilinx Vivado** installed and licensed.
 - [ ] **Digilent Zedboard** connected via USB-JTAG and UART.
-- [ ] **SD Card** formatted (FAT32) for booting Linux.
 
 ### 🏁 Quick Start Guide
-
-<details>
-<summary><b>🔧 Click for setup instructions</b></summary>
 
 #### 1️⃣ **Clone the Repository**
 ```bash
@@ -207,13 +191,11 @@ unzip RiscYZedboard.zip
 - Open **Hardware Manager** in Vivado
 - Select **Program Device** and load the generated `.bit` file
 
-#### 5️⃣ **Boot Linux (Optional)**
+#### 5️⃣ **In Linux **
 ```bash
 unzip Final_linux.zip
 ```
-- Copy the extracted files to a FAT32-formatted SD card
-- Insert the SD card into the Zedboard
-- Power on the board and connect via UART (115200 baud)
+- Open the extracted files and run gtk wave to view the waveforms
 
 </details>
 
@@ -256,7 +238,7 @@ This implementation targets **RISC-V Vector Extension v1.0** specification compl
 
 </div>
 
-This project was developed as part of advanced computer architecture research. Contributions, bug reports, and feature requests are welcome!
+This project was developed as part of ECE338 - Parallel Computer Architecture Course in University of Thessaly. Contributions, bug reports, and feature requests are welcome!
 
 ### 🤝 How to Contribute
 
@@ -270,7 +252,6 @@ This project was developed as part of advanced computer architecture research. C
 
 For questions, collaboration, or support:
 - **GitHub Issues**: [Report bugs or request features](https://github.com/fmarkovitsis/RVV_ext/issues)
-- **Project Maintainer**: [@fmarkovitsis](https://github.com/fmarkovitsis)
 
 ---
 
@@ -293,8 +274,6 @@ For questions, collaboration, or support:
 **📖 Learning Materials**
 - [RISC-V ISA Manual](https://riscv.org/technical/specifications/)
 - [Vector Processing Fundamentals](https://en.wikipedia.org/wiki/Vector_processor)
-- [FPGA Design Best Practices](https://www.intel.com/content/www/us/en/docs/programmable/683082/current/design-recommendations.html)
-
 </td>
 </tr>
 </table>
