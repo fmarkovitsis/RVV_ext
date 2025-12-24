@@ -108,7 +108,7 @@ Contains simulation scripts and test vectors to verify individual modules and th
 
 The design follows a decoupled architecture where the scalar core handles control flow while offloading vector instructions to the VPU.
 
-```mermaid
+===
 
 ## 💻 Hardware Requirements
 
