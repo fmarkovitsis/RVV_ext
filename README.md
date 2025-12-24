@@ -92,17 +92,6 @@ Contains simulation scripts and test vectors to verify individual modules.
 
 </details>
 
-### 📦 Deployment & Binaries
-> **Files for physical implementation on FPGA**
-
-| File | Description |
-|---|---|
-| `RiscYZedboard.zip` | Complete **Vivado Project** archive including constraints (`.xdc`) and IP configurations for the Zedboard. |
-| `Final_linux.zip` | Bootable **Linux Image** and root filesystem tailored for the RISC-V SoC. |
-| `DATED_files/` | Archive of historical design iterations. |
-
----
-
 ## 🛠️ System Architecture
 
 The design follows a decoupled architecture where the scalar core handles control flow while offloading vector instructions to the VPU.
