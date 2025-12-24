@@ -164,13 +164,11 @@ git clone https://github.com/fmarkovitsis/RVV_ext.git
 cd RVV_ext
 ```
 
-#### 2️⃣ **Extract and Open Vivado Project**
-```bash
-unzip RiscYZedboard.zip
-```
+#### 2️⃣ **Open Vivado Project**
+
 - Open **Vivado Design Suite**
-- Navigate to `File > Project > Open`
-- Select the `.xpr` project file from the extracted directory
+- Create a new project, with Zedboard as the target device
+- Drop the files contained in `COMPLETE_CPU_and_RVV_zedboard/RiscYZedboard\RiscYZedboard.srcs/sources_1/imports/RiscyVivadoWorking.srcs/sources_1/imports/src/CPU` in sources and the files contained in `COMPLETE_CPU_and_RVV_zedboard/RiscYZedboard/RiscYZedboard.srcs/constrs_1/imports/vga_zedboard-master`
 
 #### 3️⃣ **Synthesize and Implement Design**
 - In Vivado, click **Run Synthesis**
@@ -181,12 +179,6 @@ unzip RiscYZedboard.zip
 - Connect your Zedboard via JTAG
 - Open **Hardware Manager** in Vivado
 - Select **Program Device** and load the generated `.bit` file
-
-#### 5️⃣ **In Linux **
-```bash
-unzip Final_linux.zip
-```
-- Open the extracted files and run gtk wave to view the waveforms
 
 </details>
 
